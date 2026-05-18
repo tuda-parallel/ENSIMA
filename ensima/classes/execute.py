@@ -21,11 +21,11 @@ from rich.markup import escape
 from rich.panel import Panel
 from rich.status import Status
 
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.classes.print import MyConsole
-from ensima_optimize.helpers.misc import safe_remove
-from ensima_optimize.helpers.read_data import read_last_progress
-from ensima_optimize.helpers.units import convert_seconds_to_hms
+from ensima.classes.logger import Logger
+from ensima.classes.print import MyConsole
+from ensima.helpers.misc import safe_remove
+from ensima.helpers.read_data import read_last_progress
+from ensima.helpers.units import convert_seconds_to_hms
 
 
 def execute_block(

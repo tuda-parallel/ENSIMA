@@ -13,8 +13,8 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 
 import numpy as np
 
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.helpers.read_geometry import read_coordinates_from_file
+from ensima.classes.logger import Logger
+from ensima.helpers.read_geometry import read_coordinates_from_file
 
 logger = Logger(__name__, level="INFO").get()
 

@@ -35,7 +35,7 @@ import re
 import sys
 from argparse import Namespace
 
-from ensima_optimize.classes.logger import set_log_file
+from ensima.classes.logger import set_log_file
 
 
 def parse_arguments(arg_list: object = None) -> Namespace:

@@ -15,13 +15,13 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 import numbers
 import socket
 
-from ensima_optimize.classes.bayesian_optimization import BayesianOptimization
-from ensima_optimize.classes.license_server import LicenseServer
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.helpers.objective_function import dummy_init
-from ensima_optimize.helpers.parse_args import parse_arguments
-from ensima_optimize.helpers.plot import plot
-from ensima_optimize.helpers.read_data import read_data_type
+from ensima.classes.bayesian_optimization import BayesianOptimization
+from ensima.classes.license_server import LicenseServer
+from ensima.classes.logger import Logger
+from ensima.helpers.objective_function import dummy_init
+from ensima.helpers.parse_args import parse_arguments
+from ensima.helpers.plot import plot
+from ensima.helpers.read_data import read_data_type
 
 
 def main(

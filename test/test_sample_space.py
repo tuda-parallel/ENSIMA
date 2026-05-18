@@ -16,9 +16,9 @@ import logging
 import numpy as np
 import pytest
 
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.classes.search_space import SearchSpace
-from ensima_optimize.helpers.parse_args import parse_arguments
+from ensima.classes.logger import Logger
+from ensima.classes.search_space import SearchSpace
+from ensima.helpers.parse_args import parse_arguments
 
 LOGGER = logging.getLogger(__name__)
 

@@ -70,7 +70,7 @@ Documentation = "https://git-ce.rwth-aachen.de/ensima/ensima-code/-/blob/master/
 
 
 [project.scripts]
-ensima_optimize = "ensima_optimize.optimize:main"
+ensima = "ensima.optimize:main"
 
 [tool.pytest.ini_options]
 log_cli = true
@@ -79,7 +79,7 @@ log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(linen
 log_cli_date_format = "%Y-%m-%d %H:%M:%S"
 
 [tool.setuptools.dynamic]
-version = { attr = "ensima_optimize.__version__" }
+version = { attr = "ensima.__version__" }
 readme = { file = ["README.md"] }
 
 
@@ -148,4 +148,4 @@ ignore = [
 ]
 
 [tool.ruff.lint.isort]
-known-first-party = ["ensima_optimize"]
+known-first-party = ["ensima"]

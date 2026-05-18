@@ -17,11 +17,11 @@ import sys
 import threading
 import time
 
-from ensima_optimize.classes.execute import execute_block
-from ensima_optimize.classes.license_server import LicenseServer
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.helpers.parse_args import parse_arguments
-from ensima_optimize.helpers.read_data import read_last_progress
+from ensima.classes.execute import execute_block
+from ensima.classes.license_server import LicenseServer
+from ensima.classes.logger import Logger
+from ensima.helpers.parse_args import parse_arguments
+from ensima.helpers.read_data import read_last_progress
 
 RICH_AVAILABLE = importlib.util.find_spec("rich") is not None
 
@@ -236,7 +236,7 @@ if __name__ == "__main__":
         f"cd {args.path} && {args.ofsolver} -j {args.jobname} -c 1"
     )
     logger.debug(f"Executing command: {command}")
-    app_log = "/d/gitlab/ensima-code/optimization/ensima_optimize/app.log"
+    app_log = "/d/gitlab/ensima-code/optimization/ensima/app.log"
     with ProgressWatcher(log, log_level=args.log_level) as watcher:
         # process = execute_background(command, app_log, options={"check": False})
         # time.sleep(50)

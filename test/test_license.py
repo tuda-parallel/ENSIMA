@@ -17,8 +17,8 @@ import time
 
 import pytest
 
-from ensima_optimize.classes.license_server import LicenseServer
-from ensima_optimize.helpers.parse_args import parse_arguments
+from ensima.classes.license_server import LicenseServer
+from ensima.helpers.parse_args import parse_arguments
 
 LOGGER = logging.getLogger(__name__)
 

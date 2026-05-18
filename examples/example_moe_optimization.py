@@ -11,11 +11,11 @@ For more information, see the LICENSE file in the project root:
 https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 """
 
-from ensima_optimize.helpers.adjust_args_cluster import (
+from ensima.helpers.adjust_args_cluster import (
     adjust_args_and_parts_for_cluster,
 )
-from ensima_optimize.helpers.parse_args import parse_arguments
-from ensima_optimize.optimize import main
+from ensima.helpers.parse_args import parse_arguments
+from ensima.optimize import main
 
 # INFO: In contrast to `example_optimization.py`, the moe mode needs:
 # 1) the geometry of the new part (passed in args with `-g`)

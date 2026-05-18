@@ -15,7 +15,7 @@ import itertools
 
 import numpy as np
 
-from ensima_optimize.classes.logger import Logger
+from ensima.classes.logger import Logger
 
 
 class SearchSpace:

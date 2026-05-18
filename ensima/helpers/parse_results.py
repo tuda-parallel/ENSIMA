@@ -14,8 +14,8 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 import os
 import subprocess
 
-from ensima_optimize.classes.execute import execute_block
-from ensima_optimize.classes.logger import Logger
+from ensima.classes.execute import execute_block
+from ensima.classes.logger import Logger
 
 
 def csv_parser_path(log_level: str = "WARNING") -> str:

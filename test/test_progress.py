@@ -17,11 +17,11 @@ import time
 
 import pytest
 
-from ensima_optimize.classes.execute import execute_background, execute_block
-from ensima_optimize.classes.license_server import LicenseServer
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.classes.progress_watcher import ProgressWatcher
-from ensima_optimize.helpers.parse_args import parse_arguments
+from ensima.classes.execute import execute_background, execute_block
+from ensima.classes.license_server import LicenseServer
+from ensima.classes.logger import Logger
+from ensima.classes.progress_watcher import ProgressWatcher
+from ensima.helpers.parse_args import parse_arguments
 
 LOGGER = logging.getLogger(__name__)
 

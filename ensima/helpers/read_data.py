@@ -17,7 +17,7 @@ import re
 import numpy as np
 import pandas as pd
 
-from ensima_optimize.classes.logger import Logger
+from ensima.classes.logger import Logger
 
 
 def read_simple_data(input: str) -> tuple[np.ndarray, np.ndarray]:

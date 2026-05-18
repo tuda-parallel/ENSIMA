@@ -20,13 +20,13 @@ import pytest
 from rich.console import Console
 from sklearn.exceptions import ConvergenceWarning
 
-from ensima_optimize.classes.bayesian_optimization import BayesianOptimization
-from ensima_optimize.classes.execute import execute_block_and_log
-from ensima_optimize.classes.file_modifier import FileModifier
-from ensima_optimize.helpers.objective_function import dummy_init
-from ensima_optimize.helpers.parse_args import parse_arguments
-from ensima_optimize.helpers.read_data import read_data
-from ensima_optimize.optimize import main
+from ensima.classes.bayesian_optimization import BayesianOptimization
+from ensima.classes.execute import execute_block_and_log
+from ensima.classes.file_modifier import FileModifier
+from ensima.helpers.objective_function import dummy_init
+from ensima.helpers.parse_args import parse_arguments
+from ensima.helpers.read_data import read_data
+from ensima.optimize import main
 
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
 

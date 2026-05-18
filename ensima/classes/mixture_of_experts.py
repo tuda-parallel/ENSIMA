@@ -24,11 +24,11 @@ import torch.nn as nn
 import torch.optim as optim
 from sklearn.metrics.pairwise import cosine_similarity, euclidean_distances
 
-from ensima_optimize.classes.expert import Expert
-from ensima_optimize.classes.geometry_nn import PointNetAutoEncoder, PointNetClassifier
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.helpers.clustering import cluster_embeddings
-from ensima_optimize.helpers.read_geometry import (
+from ensima.classes.expert import Expert
+from ensima.classes.geometry_nn import PointNetAutoEncoder, PointNetClassifier
+from ensima.classes.logger import Logger
+from ensima.helpers.clustering import cluster_embeddings
+from ensima.helpers.read_geometry import (
     preprocess_point_cloud,
     read_coordinates_from_file,
     uniform_vector,

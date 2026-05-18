@@ -1,5 +1,5 @@
 """
-Entry point for the ensima_optimize command-line tool.
+Entry point for the ensima command-line tool.
 
 Author: Ahmad Tarraf
 Copyright (c) 2025-2026 TU Darmstadt, Germany
@@ -11,7 +11,7 @@ For more information, see the LICENSE file in the project root:
 https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 """
 
-from ensima_optimize.optimize import main
+from ensima.optimize import main
 
 if __name__ == "__main__":
     main()

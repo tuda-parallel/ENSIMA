@@ -14,9 +14,9 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 import time
 from argparse import Namespace
 
-from ensima_optimize.classes.execute import execute_background, execute_block
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.helpers.parse_args import parse_arguments
+from ensima.classes.execute import execute_background, execute_block
+from ensima.classes.logger import Logger
+from ensima.helpers.parse_args import parse_arguments
 
 
 class LicenseServer:

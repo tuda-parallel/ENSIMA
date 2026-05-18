@@ -13,7 +13,7 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 
 import numpy as np
 
-from ensima_optimize.helpers.pareto import pareto_frontier
+from ensima.helpers.pareto import pareto_frontier
 
 
 def test_pareto_optimization():

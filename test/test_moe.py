@@ -22,7 +22,7 @@ from sklearn.exceptions import ConvergenceWarning
 
 matplotlib.use("Agg")
 
-from ensima_optimize.classes.mixture_of_experts import MoEPointNetSystem
+from ensima.classes.mixture_of_experts import MoEPointNetSystem
 
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
 LOGGER = logging.getLogger(__name__)

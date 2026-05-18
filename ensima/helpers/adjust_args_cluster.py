@@ -14,7 +14,7 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 import socket
 from argparse import Namespace
 
-from ensima_optimize.classes.logger import Logger
+from ensima.classes.logger import Logger
 
 local_hostname = "electric"
 

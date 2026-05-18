@@ -45,6 +45,10 @@ tools/csv_parser
 run/
 test/tco_test/
 test_gpus.py
+test/[0-9]*/
+test/log.out
+[0-9]*/
+dummy.json
 
 # Artifacts — exclude large binary/generated files, keep JSON/CSV/MD
 artifacts/**/*.png

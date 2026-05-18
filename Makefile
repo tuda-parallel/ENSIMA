@@ -47,21 +47,20 @@ venv:
 	@echo -e "Environment created. Using python from .venv/bin/python3"
 
 msg:
-	@echo -e "\nensima_optimize was installed in a python environment in .venv"
+	@echo -e "\nensima was installed in a python environment in .venv"
 	@echo -e "To activate python from this venv, call:\nsource $(PWD)/.venv/bin/activate\n"
-	@echo -e "Afterwards, you can just call 'ensima_optimize [args]'"
+	@echo -e "Afterwards, you can just call 'ensima [args]'"
 
 
 # test
 test:
-	cd test && ../$(PYTHON) -m pytest
+	cd test && make
 
-test_parallel:
-	@$(PYTHON) -m pip show pytest-xdist > /dev/null 2>&1 || $(PYTHON) -m pip install pytest-xdist
-	cd test && ../$(PYTHON) -m pytest -n 4
+test_verbose:
+	cd test && make verbose
 
-test_failed:
-	cd test && ../$(PYTHON) -m pytest --ff
+test_silent:
+	cd test && make silent
 
 
 # style
@@ -106,9 +105,9 @@ clean: clean_project
 
 clean_all: clean
 	rm -rf .venv
-	rm -rf ensima_optimize.egg-info
+	rm -rf ensima.egg-info
 	rm -rf dist
 	rm -rf build
 
 
-.PHONY: all install debug development venv msg test test_parallel test_failed check_style check_tools build pack testpypi testpypi-install pypi clean clean_project clean_all
+.PHONY: all install debug development venv msg test test_verbose test_silent check_style check_tools build pack testpypi testpypi-install pypi clean clean_project clean_all

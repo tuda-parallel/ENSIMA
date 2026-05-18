@@ -11,8 +11,8 @@ For more information, see the LICENSE file in the project root:
 https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 """
 
-from ensima_optimize.helpers.parse_args import parse_arguments
-from ensima_optimize.optimize import main
+from ensima.helpers.parse_args import parse_arguments
+from ensima.optimize import main
 
 # MOE is the best for new part
 # Example showing how to create script for cluster

@@ -15,11 +15,11 @@ import os
 
 import numpy as np
 
-from ensima_optimize.classes.bayesian_optimization import BayesianOptimization
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.helpers.adjust_args_cluster import adjust_args_for_cluster
-from ensima_optimize.helpers.parse_args import parse_arguments
-from ensima_optimize.helpers.read_data import read_data
+from ensima.classes.bayesian_optimization import BayesianOptimization
+from ensima.classes.logger import Logger
+from ensima.helpers.adjust_args_cluster import adjust_args_for_cluster
+from ensima.helpers.parse_args import parse_arguments
+from ensima.helpers.read_data import read_data
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 csv_file = "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML_20250401.csv"

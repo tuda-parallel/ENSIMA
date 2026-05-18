@@ -13,7 +13,7 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 
 import logging
 
-from ensima_optimize.helpers.parse_results import csv_parser_path
+from ensima.helpers.parse_results import csv_parser_path
 
 LOGGER = logging.getLogger(__name__)
 

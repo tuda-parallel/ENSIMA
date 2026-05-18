@@ -14,7 +14,7 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 import datetime
 import os
 
-from ensima_optimize.classes.logger import Logger
+from ensima.classes.logger import Logger
 
 
 class FileModifier:

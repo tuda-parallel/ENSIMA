@@ -14,7 +14,7 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 import glob
 import os
 
-from ensima_optimize.classes.logger import Logger
+from ensima.classes.logger import Logger
 
 
 def safe_remove(signal_file_path: str):

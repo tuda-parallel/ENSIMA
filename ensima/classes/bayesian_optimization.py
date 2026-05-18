@@ -30,30 +30,30 @@ from rich.console import Console
 from rich.table import Table
 from scipy.signal import find_peaks
 
-from ensima_optimize.classes.acquisition_function import AcquisitionFunction
-from ensima_optimize.classes.file_modifier import FileModifier
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.classes.mixture_of_experts import MoEPointNetSystem
-from ensima_optimize.classes.model import Model
-from ensima_optimize.classes.search_space import SearchSpace
-from ensima_optimize.classes.simulation import Simulation
-from ensima_optimize.helpers.co2 import estimate_co2
-from ensima_optimize.helpers.energy import (
+from ensima.classes.acquisition_function import AcquisitionFunction
+from ensima.classes.file_modifier import FileModifier
+from ensima.classes.logger import Logger
+from ensima.classes.mixture_of_experts import MoEPointNetSystem
+from ensima.classes.model import Model
+from ensima.classes.search_space import SearchSpace
+from ensima.classes.simulation import Simulation
+from ensima.helpers.co2 import estimate_co2
+from ensima.helpers.energy import (
     energy_estimation_end,
     energy_estimation_start,
     estimate_energy,
 )
-from ensima_optimize.helpers.misc import delete_matching, safe_remove
-from ensima_optimize.helpers.optimum import find_min_or_max
-from ensima_optimize.helpers.pareto import pareto_frontier, plot_pareto
-from ensima_optimize.helpers.read_data import (
+from ensima.helpers.misc import delete_matching, safe_remove
+from ensima.helpers.optimum import find_min_or_max
+from ensima.helpers.pareto import pareto_frontier, plot_pareto
+from ensima.helpers.read_data import (
     read_data,
     read_data_type,
     read_last_progress,
 )
-from ensima_optimize.helpers.read_geometry import read_coordinates_from_file
-from ensima_optimize.helpers.serilaize import to_json_serializable
-from ensima_optimize.helpers.units import convert_seconds_to_hms, format_with_units
+from ensima.helpers.read_geometry import read_coordinates_from_file
+from ensima.helpers.serilaize import to_json_serializable
+from ensima.helpers.units import convert_seconds_to_hms, format_with_units
 
 
 class BayesianOptimization:

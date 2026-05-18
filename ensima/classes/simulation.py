@@ -21,19 +21,19 @@ from argparse import Namespace
 
 import numpy as np
 
-from ensima_optimize.classes.execute import (
+from ensima.classes.execute import (
     execute_block,
     monitor_and_create_signal,
     timer_process,
     write_signal,
 )
-from ensima_optimize.classes.file_modifier import FileModifier
-from ensima_optimize.classes.logger import Logger
-from ensima_optimize.classes.progress_watcher import ProgressWatcher
-from ensima_optimize.helpers.misc import safe_remove
-from ensima_optimize.helpers.parse_results import csv_parser_path
-from ensima_optimize.helpers.read_data import read_data
-from ensima_optimize.helpers.units import convert_seconds_to_hms
+from ensima.classes.file_modifier import FileModifier
+from ensima.classes.logger import Logger
+from ensima.classes.progress_watcher import ProgressWatcher
+from ensima.helpers.misc import safe_remove
+from ensima.helpers.parse_results import csv_parser_path
+from ensima.helpers.read_data import read_data
+from ensima.helpers.units import convert_seconds_to_hms
 
 
 class Simulation:

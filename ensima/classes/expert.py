@@ -13,7 +13,7 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 
 import numpy as np
 
-from ensima_optimize.classes.model import Model
+from ensima.classes.model import Model
 
 
 class Expert(Model):

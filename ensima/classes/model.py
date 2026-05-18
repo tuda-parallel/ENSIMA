@@ -56,7 +56,7 @@ from sklearn.exceptions import ConvergenceWarning
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import ConstantKernel, Matern, WhiteKernel
 
-from ensima_optimize.classes.logger import Logger
+from ensima.classes.logger import Logger
 
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
 

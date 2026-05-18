@@ -11,9 +11,9 @@ For more information, see the LICENSE file in the project root:
 https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 """
 
-from ensima_optimize.helpers.adjust_args_cluster import adjust_args_for_cluster
-from ensima_optimize.helpers.parse_args import parse_arguments
-from ensima_optimize.optimize import main
+from ensima.helpers.adjust_args_cluster import adjust_args_for_cluster
+from ensima.helpers.parse_args import parse_arguments
+from ensima.optimize import main
 
 # use filtered or MOE
 if __name__ == "__main__":
@@ -143,7 +143,7 @@ if __name__ == "__main__":
 
     # 2)filter by type
     # since the CSV is unlabeled, we filter by type.
-    # Use ensima_optimize/helpers/complexity.py to find the type number.
+    # Use ensima/helpers/complexity.py to find the type number.
     # args.output = "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML.csv"
     # args = adjust_args_for_cluster(args)
     # main(args, True, type_number=1)

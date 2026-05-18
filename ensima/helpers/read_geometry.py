@@ -13,7 +13,7 @@ https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 
 import numpy as np
 
-from ensima_optimize.classes.logger import Logger
+from ensima.classes.logger import Logger
 
 
 def read_coordinates_from_file(filename, log_level="INFO", prefix="ReadCoords"):

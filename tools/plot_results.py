@@ -4,7 +4,7 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 
-from ensima_optimize.helpers.units import get_unit
+from ensima.helpers.units import get_unit
 
 # Load data
 # json_file = "/d/gitlab/ensima-code/optimization/SeatShell.json"
@@ -17,8 +17,8 @@ json_file = "/d/gitlab/ensima-code/optimization/paper/MOE/DACH-VWS/DACH-VWS.json
 with open(json_file) as f:
     data = json.load(f)
 
-from ensima_optimize.helpers.co2 import estimate_co2
-from ensima_optimize.helpers.energy import estimate_energy
+from ensima.helpers.co2 import estimate_co2
+from ensima.helpers.energy import estimate_energy
 
 expert = {}
 if "DACH" in json_file:
