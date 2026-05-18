@@ -1,0 +1,17 @@
+$Program,OpenForm v2.22.1
+*Title,Front Door Results
+*Description,Labels
+*Process,1: BSaeule_DX56D_4Cores
+
+BSaeule_DX56D_4Cores: 100% (Time: 127.5 Inc: 255)
+OP20: 100%
+OP21 - Springback: 100%
+
+*LabelType,MinMax,Name,IDs,Value
+"Thickness Change %-Min",00055531,   -18.5
+"Thickness Change %-Max",00045487,    16.8
+"Total Distance to Reference-Min",00008701,      0.0E+00
+"Total Distance to Reference-Max",00009635,      1.0E+01
+
+*Formability,Inadequate Stretch,Wrinkling,Wrinkling Tendency,Safe,Risk of Cracks,Severe Thinning,Cracks
+     1.5,    29.2,    32.4,    37.0,     0.0,     0.0,     0.0

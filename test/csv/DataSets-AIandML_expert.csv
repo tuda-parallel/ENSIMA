@@ -1,0 +1,46 @@
+$---------------------------------------------------------------
+$ Program : OFSolv 1.0.3
+$
+$ Design 1: Blank Thickness ........ D   [mm]
+$ Design 2: Blankholder Pressure ... p   [N/mm*2]
+$ Design 3: Friction Coefficient ... Fr  [/]
+$ Design 4: Drawbead Forces ........ db  [N/mm]
+$ Design 5: Yield Strength ......... Rp  [N/mm*2]
+$
+$ Target 1: Thinning ............... dD  [%]
+$ Target 2: Thickening ............. dT  [%]
+$ Target 3: Feasibility ............ Li  [%] .... Li = [L1 - L7]
+$ Target 4: SpringBack ............. SB  [mm]
+$ Target 5: ComputationTime ........ CPU [HH:MM:SS]
+$
+$ Part Type: A,B: in-plane Dimensions, L: Length, h: Depth (Punch Stroke) 
+$    0 - Test : ............................... Stripe, Cups
+$    1 - Flat : A/B <= 3.0 and h/A <= 0.2 ..... Roof, Doors, Fender
+$    2 - Beam : L/B >  3.0 and h/B >  0.3 ..... Pilar, Tunnel, Beams
+$    3 - Deep : A/B <= 3.0 and h/B >  0.2 ..... Wheelhouse, Tank
+$
+$ Row Format:
+$ Nr, type , Rp  , D  ,  p , Fr , db,  dD , dT , L1 , L2 , L3 , L4 , L5 , L6 , L7 , SB ,  CPU   ,
+$
+$---------------------------------------------------------------
+START
+$---------------------------------------------------------------
+$---- Part: Cylindrical Cup    Simulation: CylindricalCup   ----
+$---- Type: 0, A/B = 1.0, h/B = 0.30,  Complexity: 0        ----
+$---- CPUs: 2Quad CPU Q9400 @ 2.66GHz (drawing)             ----
+$---------------------------------------------------------------
+$---- D  = 0.60, 0.70, 0.80, 0.90, 1.00 [mm]
+$---- p  = 1.00, 2.00, 3.00, 4.00, 5.00 [N/mm*2]
+$---- Fr = 0.06, 0.10, 0.12             [/]
+$---- db =   0 [N/mm]
+$---- Rp = 180 [N/mm*2] (DC04:    200000,0.30,180.0,25.0,310.0,1.55)
+$---- Rp = 263 [N/mm*2] (HX240LA: 210000,0.30,263.0,19.8,379.0,0.94)
+$---- Rp = 365 [N/mm*2] (ZStE340: 210000,0.30,365.0,19.0,462.0,1.00)
+$---------------------------------------------------------------
+$
+$ Rp=180 [N/mm*2] -------------
+1,cylindrical_cup,180.0,0.60, 1.0,0.06,  0,-14.5,34.3, 0.0,36.7,28.3,35.0, 0.0, 0.0, 0.0, 0.0,00:26:38,
+   2,DACH-VWS,140.0,6.40, 3.0,0.00,  0, -2.3, 0.9,  82.2,10.3, 0.4, 7.2, 0.0, 0.0, 0.0,   0.0,
+   3,DACH-VWS,140.0,6.40, 3.0,0.00,  0, -2.3, 0.9,  82.2,10.3, 0.4, 7.1, 0.0, 0.0, 0.0,   0.0,
+   4,DACH-VWS,140.0,6.40, 3.0,0.00,  0, -2.3, 0.9,  82.2,10.3, 0.4, 7.2, 0.0, 0.0, 0.0,   0.0,
+END

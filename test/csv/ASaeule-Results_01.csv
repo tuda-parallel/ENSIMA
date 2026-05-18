@@ -1,0 +1,13 @@
+$Program,OpenForm v2.22.3
+*Title,Front Door Results
+*Description,Labels
+*Process,1: ASaeule
+
+
+
+*LabelType,MinMax,Name,IDs,Value
+"Thickness Change %-Min",00039367,  -25.22
+"Thickness Change %-Max",00073950,   15.51
+
+*Formability,Inadequate Stretch,Wrinkling,Wrinkling Tendency,Safe,Risk of Cracks,Severe Thinning,Cracks
+    4.06,   11.92,   12.72,   71.30,    0.01,    0.00,    0.00
