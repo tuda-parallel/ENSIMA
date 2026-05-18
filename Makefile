@@ -87,17 +87,17 @@ testpypi: build
 	$(PYTHON) -m twine upload --repository testpypi dist/*
 
 testpypi-install:
-	$(PYTHON) -m pip install --index-url https://test.pypi.org/simple/ --no-deps ensima-hpc
+	$(PYTHON) -m pip install --index-url https://test.pypi.org/simple/ --no-deps ensima
 
 pypi: build
 	$(PYTHON) -m pip install --upgrade twine
 	$(PYTHON) -m twine upload dist/*
-	$(PYTHON) -m pip install ensima-hpc
+	$(PYTHON) -m pip install ensima
 
 
 # clean
 clean_project:
-	$(PYTHON) -m pip uninstall --yes ensima-hpc || echo "no installation of ensima-hpc found"
+	$(PYTHON) -m pip uninstall --yes ensima || echo "no installation of ensima found"
 
 clean: clean_project
 	rm -rf .pytest_cache
