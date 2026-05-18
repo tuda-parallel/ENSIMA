@@ -45,3 +45,8 @@ tools/csv_parser
 run/
 test/tco_test/
 test_gpus.py
+
+# Artifacts — exclude large binary/generated files, keep JSON/CSV/MD
+artifacts/**/*.pkl
+artifacts/**/*.png
+artifacts/paper.zip

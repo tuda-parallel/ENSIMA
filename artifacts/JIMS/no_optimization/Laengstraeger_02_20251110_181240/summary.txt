@@ -1,0 +1,148 @@
+
+========================================================================================================================
+                        Optimization Summary                         
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric           ┃                                          Value ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Optimization Job │                               Laengstraeger_02 │
+│ Date             │                            2025-11-10 20:34:10 │
+│ Best Output      │           [11.8 26.1 19.2 42.9  0.   0.   0. ] │
+│ Best Input       │ [7.12e+02 1.00e+00 3.00e-02 0.00e+00 8.00e-01] │
+│ Total iterations │                                             12 │
+│ Total Sim Energy │                                     978.581 kJ │
+│ Total Sim Energy │                                    0.000e+00 J │
+│ Total CO₂        │                                      217.462 g │
+│ Total Time       │                                       02:21:24 │
+└──────────────────┴────────────────────────────────────────────────┘
+
+
+
+                                                             Samples                                                              
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓
+┃              ┃              ┃              ┃    Y STD    ┃      ┃             ┃              ┃          ┃           ┃          ┃
+┃              ┃              ┃    Y Mean    ┃  Predicted  ┃      ┃             ┃              ┃          ┃           ┃          ┃
+┃              ┃              ┃  Predicted   ┃  (L1 L2 L3  ┃      ┃             ┃              ┃          ┃           ┃          ┃
+┃  X (Rp p Fr  ┃ Y (L1 L2 L3  ┃ (L1 L2 L3 L4 ┃  L4 L5 L6   ┃      ┃             ┃              ┃          ┃           ┃          ┃
+┃    db D)     ┃ L4 L5 L6 L7) ┃  L5 L6 L7)   ┃     L7)     ┃  EI  ┃  Sim Energy ┃ Train Energy ┃      CO₂ ┃  Progress ┃     Time ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩
+│  [7.12e+02   │  [11.8 26.1  │ [nan nan nan │  [nan nan   │ 0.00 │   70.992 kJ │  0.000e+00 J │ 15.776 g │    100.0% │ 00:10:23 │
+│   1.00e+00   │  19.2 42.9   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   3.00e-02   │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.00e+00   │      ]       │              │             │      │             │              │          │           │          │
+│  8.00e-01]   │              │              │             │      │             │              │          │           │          │
+│  [7.12e+02   │  [10.1 26.1  │ [nan nan nan │  [nan nan   │ 0.00 │   77.519 kJ │  0.000e+00 J │ 17.227 g │    100.0% │ 00:11:13 │
+│   1.00e+00   │  18.2 45.6   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   3.00e-02   │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.00e+00   │      ]       │              │             │      │             │              │          │           │          │
+│  1.00e+00]   │              │              │             │      │             │              │          │           │          │
+│  [5.97e+02   │  [10.1 26.1  │ [nan nan nan │  [nan nan   │ 0.00 │   74.754 kJ │  0.000e+00 J │ 16.612 g │    100.0% │ 00:11:03 │
+│   1.00e+00   │  18.2 45.6   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   3.00e-02   │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.00e+00   │      ]       │              │             │      │             │              │          │           │          │
+│  1.00e+00]   │              │              │             │      │             │              │          │           │          │
+│  [5.97e+02   │  [ 9.2 23.   │ [nan nan nan │  [nan nan   │ 0.00 │   82.999 kJ │  0.000e+00 J │ 18.444 g │    100.0% │ 00:11:48 │
+│   2.00e+00   │  16.5 51.3   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   3.00e-02   │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.00e+00   │      ]       │              │             │      │             │              │          │           │          │
+│  1.00e+00]   │              │              │             │      │             │              │          │           │          │
+│  [5.97e+02   │  [ 8.6 22.6  │ [nan nan nan │  [nan nan   │ 0.00 │   80.030 kJ │  0.000e+00 J │ 17.785 g │    100.0% │ 00:11:28 │
+│   2.00e+00   │  15.3 53.4   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   6.00e-02   │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.00e+00   │      ]       │              │             │      │             │              │          │           │          │
+│  1.00e+00]   │              │              │             │      │             │              │          │           │          │
+│  [5.97e+02   │  [ 7.9 21.9  │ [nan nan nan │  [nan nan   │ 0.00 │   80.378 kJ │  0.000e+00 J │ 17.862 g │    100.0% │ 00:11:38 │
+│   2.00e+00   │  12.9 57.2   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   1.20e-01   │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.00e+00   │      ]       │              │             │      │             │              │          │           │          │
+│  1.00e+00]   │              │              │             │      │             │              │          │           │          │
+│  [5.97e+02   │  [ 7.2 21.   │ [nan nan nan │  [nan nan   │ 0.00 │   97.120 kJ │  0.000e+00 J │ 21.582 g │    100.0% │ 00:14:03 │
+│   3.00e+00   │  11.5 60.2   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   1.20e-01   │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.00e+00   │      ]       │              │             │      │             │              │          │           │          │
+│  1.00e+00]   │              │              │             │      │             │              │          │           │          │
+│   [3.9e+02   │  [ 7.2 21.   │ [nan nan nan │  [nan nan   │ 0.00 │   91.963 kJ │  0.000e+00 J │ 20.436 g │    100.0% │ 00:13:28 │
+│   3.0e+00    │  11.5 60.2   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   1.2e-01    │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.0e+00    │      ]       │              │             │      │             │              │          │           │          │
+│   1.0e+00]   │              │              │             │      │             │              │          │           │          │
+│   [3.9e+02   │  [ 8.7 22.6  │ [nan nan nan │  [nan nan   │ 0.00 │   76.527 kJ │  0.000e+00 J │ 17.006 g │    100.0% │ 00:10:58 │
+│   3.0e+00    │  15.5 53.2   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   3.0e-02    │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.0e+00    │      ]       │              │             │      │             │              │          │           │          │
+│   1.0e+00]   │              │              │             │      │             │              │          │           │          │
+│   [3.9e+02   │  [ 9.2 23.   │ [nan nan nan │  [nan nan   │ 0.00 │   81.553 kJ │  0.000e+00 J │ 18.123 g │    100.0% │ 00:11:48 │
+│   2.0e+00    │  16.5 51.3   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   3.0e-02    │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.0e+00    │      ]       │              │             │      │             │              │          │           │          │
+│   1.0e+00]   │              │              │             │      │             │              │          │           │          │
+│   [3.9e+02   │  [ 8.6 22.6  │ [nan nan nan │  [nan nan   │ 0.00 │   75.076 kJ │  0.000e+00 J │ 16.684 g │    100.0% │ 00:10:53 │
+│   2.0e+00    │  15.3 53.4   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   6.0e-02    │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.0e+00    │      ]       │              │             │      │             │              │          │           │          │
+│   1.0e+00]   │              │              │             │      │             │              │          │           │          │
+│   [3.9e+02   │  [ 7.7 22.   │ [nan nan nan │  [nan nan   │ 0.00 │   89.668 kJ │  0.000e+00 J │ 19.926 g │    100.0% │ 00:12:38 │
+│   2.0e+00    │  13.3 56.9   │ nan nan nan  │ nan nan nan │      │             │              │          │           │          │
+│   1.2e-01    │ 0.   0.   0. │     nan]     │  nan nan]   │      │             │              │          │           │          │
+│   0.0e+00    │      ]       │              │             │      │             │              │          │           │          │
+│   1.0e+00]   │              │              │             │      │             │              │          │           │          │
+└──────────────┴──────────────┴──────────────┴─────────────┴──────┴─────────────┴──────────────┴──────────┴───────────┴──────────┘
+
+
+
+                                                      Optimization arguments                                                      
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                      ┃                                                                                            Value ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ x_fields                    │                                                                     ['Rp', 'p', 'Fr', 'db', 'D'] │
+│ y_fields                    │                                                       ['L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7'] │
+│ attention_coefficients      │                                                                           [1. 1. 1. 1. 1. 1. 1.] │
+│ approximate_computing_check │                                                                                             None │
+│ approximate_computing_limit │                                                                                             None │
+│ target                      │                                                                                             None │
+│ user_constraints            │     {'D': (0.5, 1.35), 'p': (1.0, 12), 'Fr': (0.0, 0.15), 'Rp': [390, 597, 712], 'db': (0, 800)} │
+│ ofsolver                    │ /home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe │
+│ jobname                     │                                                                                 Laengstraeger_02 │
+│ cores                       │                                                                                               48 │
+│ energy_estimation           │                                                                                             True │
+│ openform                    │             /home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch │
+│ session                     │                                                                     Laengstraeger_02-Session.ofs │
+│ path                        │ /home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartT… │
+│ output                      │                  /home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_expert.csv │
+│ result_folder               │                      /home/ahmadtarraf/ensima-code/optimization/Laengstraeger_02_20251110_181240 │
+│ geometry_path               │                                                                                             None │
+│ end_condition               │                                                                                   no_improvement │
+│ end_value                   │                                                                                            100.0 │
+│ time_limit                  │                                                                                         04:00:00 │
+│ plot                        │                                                                                            False │
+│ save_and_load               │                                                                                            False │
+│ iterations                  │                                                                                               12 │
+│ parallel_samples            │                                                                                                1 │
+│ method                      │                                                                                               bo │
+│ x_space_point_creation      │                                                                                      combination │
+│ x_space_n_samples           │                                                                                            10000 │
+│ x_space_structure           │                                                                                             grid │
+│ x_space_expansion_factor    │                                                                                              0.1 │
+│ x_space_precision           │                                                                                                3 │
+│ sample_mode                 │                                                                                       downsample │
+│ epochs                      │                                                                                              100 │
+│ latent_input_dim            │                                                                                             None │
+│ latent_output_dim           │                                                                                             None │
+│ log_level                   │                                                                                            DEBUG │
+│ log_file                    │             /home/ahmadtarraf/ensima-code/optimization/logs/Laengstraeger_02_20251110_181240.log │
+│ watcher_backend             │                                                                                           logger │
+│ license_server_service      │                                                                                            False │
+│ license_server              │                                                                                         rms14562 │
+│ license_port                │                                                                                             5053 │
+│ license_type                │                                                                                              RLM │
+│ license_rlm                 │                 /home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm │
+│ selection_strategy          │                                                                                crowding_distance │
+│ full_cov                    │                                                                                            False │
+│ n_samples_mc                │                                                                                            10000 │
+│ new_expert_start            │                                                                                                2 │
+│ input                       │                                                                                               [] │
+└─────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+
+

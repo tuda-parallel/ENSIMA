@@ -1,0 +1,119 @@
+
+========================================================================================================================
+                      Optimization Summary                      
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric           ┃                                     Value ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Optimization Job │                                 SeatShell │
+│ Date             │                       2025-11-11 13:48:18 │
+│ Best Output      │      [ 0.2 17.7 26.7 55.4  0.   0.   0. ] │
+│ Best Input       │ [2.5e+02 3.0e+00 3.0e-02 0.0e+00 1.1e+00] │
+│ Total iterations │                                        11 │
+│ Total Sim Energy │                                  1.101 MJ │
+│ Total Sim Energy │                               0.000e+00 J │
+│ Total CO₂        │                                 244.556 g │
+│ Total Time       │                                  02:35:02 │
+└──────────────────┴───────────────────────────────────────────┘
+
+
+
+                                                                            Samples                                                                            
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓
+┃                     ┃                     ┃  Y Mean Predicted  ┃                     ┃      ┃             ┃               ┃          ┃           ┃          ┃
+┃                     ┃  Y (L1 L2 L3 L4 L5  ┃ (L1 L2 L3 L4 L5 L6 ┃ Y STD Predicted (L1 ┃      ┃             ┃               ┃          ┃           ┃          ┃
+┃  X (Rp p Fr db D)   ┃       L6 L7)        ┃        L7)         ┃ L2 L3 L4 L5 L6 L7)  ┃  EI  ┃  Sim Energy ┃  Train Energy ┃      CO₂ ┃  Progress ┃     Time ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩
+│  [2.5e+02 3.0e+00   │   [ 0.2 17.7 26.7   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  101.277 kJ │   0.000e+00 J │ 22.506 g │    100.0% │ 00:13:28 │
+│   3.0e-02 0.0e+00   │ 55.4  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │          ]          │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 3.0e+00   │   [ 0.1 14.4 24.    │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │   94.052 kJ │   0.000e+00 J │ 20.900 g │    100.0% │ 00:13:43 │
+│   3.0e-02 2.0e+02   │ 61.4  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │          ]          │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 3.0e+00   │   [ 0.3 10.5 19.8   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │   99.961 kJ │   0.000e+00 J │ 22.214 g │    100.0% │ 00:14:03 │
+│   3.0e-02 8.0e+02   │ 69.4  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │          ]          │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 3.0e+00   │   [ 0.2  6.2 10.    │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │   93.217 kJ │   0.000e+00 J │ 20.715 g │    100.0% │ 00:13:33 │
+│   1.2e-01 8.0e+02   │    83.5  0.   0.    │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │        0.1]         │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 6.0e+00   │   [ 0.2  8.3 17.9   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │   96.397 kJ │   0.000e+00 J │ 21.421 g │    100.0% │ 00:13:33 │
+│   3.0e-02 8.0e+02   │ 73.6  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │          ]          │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 6.0e+00   │   [ 0.2  6.  12.8   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │   96.753 kJ │   0.000e+00 J │ 21.501 g │    100.0% │ 00:14:13 │
+│   6.0e-02 8.0e+02   │ 80.9  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │          ]          │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 6.0e+00   │   [ 0.2  3.9  6.2   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  106.930 kJ │   0.000e+00 J │ 23.762 g │    100.0% │ 00:15:13 │
+│   1.2e-01 8.0e+02   │    89.3  0.2  0.    │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │        0.1]         │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 9.0e+00   │   [ 0.1  2.6  5.6   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  104.884 kJ │   0.000e+00 J │ 23.308 g │    100.0% │ 00:14:13 │
+│   1.2e-01 8.0e+02   │   90.6  0.5  0.1    │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │        0.6]         │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 9.0e+00   │   [ 0.2  4.6  9.6   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  103.005 kJ │   0.000e+00 J │ 22.890 g │    100.0% │ 00:14:33 │
+│   6.0e-02 8.0e+02   │ 85.5  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │          ]          │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 9.0e+00   │   [ 0.2  7.  15.4   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  105.212 kJ │   0.000e+00 J │ 23.380 g │    100.0% │ 00:15:03 │
+│   3.0e-02 8.0e+02   │ 77.4  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.1e+00]       │          ]          │                    │                     │      │             │               │          │           │          │
+│  [2.5e+02 9.0e+00   │   [ 0.2  7.2 16.4   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │   98.814 kJ │   0.000e+00 J │ 21.959 g │    100.0% │ 00:13:23 │
+│   3.0e-02 8.0e+02   │ 76.2  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      1.2e+00]       │          ]          │                    │                     │      │             │               │          │           │          │
+└─────────────────────┴─────────────────────┴────────────────────┴─────────────────────┴──────┴─────────────┴───────────────┴──────────┴───────────┴──────────┘
+
+
+
+                                                        Optimization arguments                                                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                      ┃                                                                                                 Value ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ x_fields                    │                                                                          ['Rp', 'p', 'Fr', 'db', 'D'] │
+│ y_fields                    │                                                            ['L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7'] │
+│ attention_coefficients      │                                                                                [1. 1. 1. 1. 1. 1. 1.] │
+│ approximate_computing_check │                                                                                                  None │
+│ approximate_computing_limit │                                                                                                  None │
+│ target                      │                                                                                                  None │
+│ user_constraints            │           {'D': (0.8, 1.8), 'p': (1.0, 12), 'Fr': (0.0, 0.15), 'Rp': [270, 420, 890], 'db': (0, 800)} │
+│ ofsolver                    │      /home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe │
+│ jobname                     │                                                                                             SeatShell │
+│ cores                       │                                                                                                    48 │
+│ energy_estimation           │                                                                                                  True │
+│ openform                    │                  /home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch │
+│ session                     │                                                                                 SeatShell-Session.ofs │
+│ path                        │ /home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_03 │
+│ output                      │                       /home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_expert.csv │
+│ result_folder               │                                  /home/ahmadtarraf/ensima-code/optimization/SeatShell_20251111_111311 │
+│ geometry_path               │                                                                                                  None │
+│ end_condition               │                                                                                        no_improvement │
+│ end_value                   │                                                                                                 100.0 │
+│ time_limit                  │                                                                                              04:00:00 │
+│ plot                        │                                                                                                 False │
+│ save_and_load               │                                                                                                 False │
+│ iterations                  │                                                                                                    11 │
+│ parallel_samples            │                                                                                                     1 │
+│ method                      │                                                                                                    bo │
+│ x_space_point_creation      │                                                                                           combination │
+│ x_space_n_samples           │                                                                                                 10000 │
+│ x_space_structure           │                                                                                                  grid │
+│ x_space_expansion_factor    │                                                                                                   0.1 │
+│ x_space_precision           │                                                                                                     3 │
+│ sample_mode                 │                                                                                            downsample │
+│ epochs                      │                                                                                                   100 │
+│ latent_input_dim            │                                                                                                  None │
+│ latent_output_dim           │                                                                                                  None │
+│ log_level                   │                                                                                                 DEBUG │
+│ log_file                    │                         /home/ahmadtarraf/ensima-code/optimization/logs/SeatShell_20251111_111311.log │
+│ watcher_backend             │                                                                                                logger │
+│ license_server_service      │                                                                                                 False │
+│ license_server              │                                                                                              rms14562 │
+│ license_port                │                                                                                                  5053 │
+│ license_type                │                                                                                                   RLM │
+│ license_rlm                 │                      /home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm │
+│ selection_strategy          │                                                                                     crowding_distance │
+│ full_cov                    │                                                                                                 False │
+│ n_samples_mc                │                                                                                                 10000 │
+│ new_expert_start            │                                                                                                     2 │
+│ input                       │                                                                                                    [] │
+└─────────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+
+

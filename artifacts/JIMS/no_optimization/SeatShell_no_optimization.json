@@ -1,0 +1,983 @@
+{
+    "sim_01": {
+        "jobname": "SeatShell",
+        "date": "2025-11-11 11:13:09",
+        "target": null,
+        "best_output": [
+            0.3,
+            17.5,
+            26.4,
+            55.9,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "best_input": [
+            250.0,
+            3.0,
+            0.03,
+            0.0,
+            1.1
+        ],
+        "total_iterations": 6,
+        "total_sim_energy": 588942.3289806033,
+        "total_train_energy": 0.0,
+        "co2": [
+            23.456116861678726,
+            19.405017062200862,
+            20.20153030297302,
+            23.203387848401917,
+            22.40559136743073,
+            22.20442966411546
+        ],
+        "total_time": "01:22:35",
+        "total_time_in_seconds": 4955,
+        "args": {
+            "x_fields": [
+                "Rp",
+                "p",
+                "Fr",
+                "db",
+                "D"
+            ],
+            "y_fields": [
+                "L1",
+                "L2",
+                "L3",
+                "L4",
+                "L5",
+                "L6",
+                "L7"
+            ],
+            "attention_coefficients": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "approximate_computing_check": null,
+            "approximate_computing_limit": null,
+            "target": null,
+            "user_constraints": {
+                "D": [
+                    0.8,
+                    1.8
+                ],
+                "p": [
+                    1.0,
+                    12
+                ],
+                "Fr": [
+                    0.0,
+                    0.15
+                ],
+                "Rp": [
+                    270,
+                    420,
+                    890
+                ],
+                "db": [
+                    0,
+                    800
+                ]
+            },
+            "ofsolver": "/home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
+            "jobname": "SeatShell",
+            "cores": 48,
+            "energy_estimation": true,
+            "openform": "/home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
+            "session": "SeatShell-Session.ofs",
+            "path": "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_03",
+            "output": "/home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_expert.csv",
+            "result_folder": "/home/ahmadtarraf/ensima-code/optimization/SeatShell_20251111_095028",
+            "geometry_path": null,
+            "end_condition": "no_improvement",
+            "end_value": 100.0,
+            "time_limit": "04:00:00",
+            "plot": false,
+            "save_and_load": false,
+            "iterations": 6,
+            "parallel_samples": 1,
+            "method": "bo",
+            "x_space_point_creation": "combination",
+            "x_space_n_samples": 10000,
+            "x_space_structure": "grid",
+            "x_space_expansion_factor": 0.1,
+            "x_space_precision": 3,
+            "sample_mode": "downsample",
+            "epochs": 100,
+            "latent_input_dim": null,
+            "latent_output_dim": null,
+            "log_level": "DEBUG",
+            "log_file": "/home/ahmadtarraf/ensima-code/optimization/logs/SeatShell_20251111_095028.log",
+            "watcher_backend": "logger",
+            "license_server_service": false,
+            "license_server": "rms14562",
+            "license_port": "5053",
+            "license_type": "RLM",
+            "license_rlm": "/home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm ",
+            "selection_strategy": "crowding_distance",
+            "full_cov": false,
+            "n_samples_mc": 10000,
+            "new_expert_start": 2,
+            "input": []
+        },
+        "best_iteration": null,
+        "x": [
+            [
+                250.0,
+                3.0,
+                0.03,
+                0.0,
+                1.1
+            ],
+            [
+                250.0,
+                3.0,
+                0.03,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                6.0,
+                0.03,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                9.0,
+                0.03,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                9.0,
+                0.06,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                9.0,
+                0.03,
+                800.0,
+                1.2
+            ]
+        ],
+        "y": [
+            [
+                0.3,
+                17.5,
+                26.4,
+                55.9,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.3,
+                10.5,
+                20.3,
+                68.9,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                8.1,
+                18.5,
+                73.1,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                7.0,
+                16.4,
+                76.4,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                4.6,
+                9.6,
+                85.5,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                7.2,
+                16.4,
+                76.2,
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "y_model_mean": [
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ]
+        ],
+        "y_model_std": [
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ]
+        ],
+        "ei_sum": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "experts": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "sim_energy": [
+            105552.52587755428,
+            87322.57677990389,
+            90906.8863633786,
+            104415.24531780863,
+            100825.16115343828,
+            99919.93348851957
+        ],
+        "train_energy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "progress": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+        ],
+        "elapsed_seconds": [
+            868.3561089038849,
+            783.3251910209656,
+            773.3569784164429,
+            843.3287343978882,
+            848.342848777771,
+            838.3304443359375
+        ]
+    },
+    "sim_02": {
+        "jobname": "SeatShell",
+        "date": "2025-11-11 13:48:18",
+        "target": null,
+        "best_output": [
+            0.2,
+            17.7,
+            26.7,
+            55.4,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "best_input": [
+            250.0,
+            3.0,
+            0.03,
+            0.0,
+            1.1
+        ],
+        "total_iterations": 11,
+        "total_sim_energy": 1100503.1057661788,
+        "total_train_energy": 0.0,
+        "co2": [
+            22.50601279874514,
+            20.90049144101193,
+            22.213639728996228,
+            20.714877187527637,
+            21.421482485412245,
+            21.500683328809338,
+            23.762308009986334,
+            23.307610225912182,
+            22.890090528979897,
+            23.380460580859953,
+            21.958589409576632
+        ],
+        "total_time": "02:35:02",
+        "total_time_in_seconds": 9302,
+        "args": {
+            "x_fields": [
+                "Rp",
+                "p",
+                "Fr",
+                "db",
+                "D"
+            ],
+            "y_fields": [
+                "L1",
+                "L2",
+                "L3",
+                "L4",
+                "L5",
+                "L6",
+                "L7"
+            ],
+            "attention_coefficients": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "approximate_computing_check": null,
+            "approximate_computing_limit": null,
+            "target": null,
+            "user_constraints": {
+                "D": [
+                    0.8,
+                    1.8
+                ],
+                "p": [
+                    1.0,
+                    12
+                ],
+                "Fr": [
+                    0.0,
+                    0.15
+                ],
+                "Rp": [
+                    270,
+                    420,
+                    890
+                ],
+                "db": [
+                    0,
+                    800
+                ]
+            },
+            "ofsolver": "/home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
+            "jobname": "SeatShell",
+            "cores": 48,
+            "energy_estimation": true,
+            "openform": "/home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
+            "session": "SeatShell-Session.ofs",
+            "path": "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_03",
+            "output": "/home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_expert.csv",
+            "result_folder": "/home/ahmadtarraf/ensima-code/optimization/SeatShell_20251111_111311",
+            "geometry_path": null,
+            "end_condition": "no_improvement",
+            "end_value": 100.0,
+            "time_limit": "04:00:00",
+            "plot": false,
+            "save_and_load": false,
+            "iterations": 11,
+            "parallel_samples": 1,
+            "method": "bo",
+            "x_space_point_creation": "combination",
+            "x_space_n_samples": 10000,
+            "x_space_structure": "grid",
+            "x_space_expansion_factor": 0.1,
+            "x_space_precision": 3,
+            "sample_mode": "downsample",
+            "epochs": 100,
+            "latent_input_dim": null,
+            "latent_output_dim": null,
+            "log_level": "DEBUG",
+            "log_file": "/home/ahmadtarraf/ensima-code/optimization/logs/SeatShell_20251111_111311.log",
+            "watcher_backend": "logger",
+            "license_server_service": false,
+            "license_server": "rms14562",
+            "license_port": "5053",
+            "license_type": "RLM",
+            "license_rlm": "/home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm ",
+            "selection_strategy": "crowding_distance",
+            "full_cov": false,
+            "n_samples_mc": 10000,
+            "new_expert_start": 2,
+            "input": []
+        },
+        "best_iteration": null,
+        "x": [
+            [
+                250.0,
+                3.0,
+                0.03,
+                0.0,
+                1.1
+            ],
+            [
+                250.0,
+                3.0,
+                0.03,
+                200.0,
+                1.1
+            ],
+            [
+                250.0,
+                3.0,
+                0.03,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                3.0,
+                0.12,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                6.0,
+                0.03,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                6.0,
+                0.06,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                6.0,
+                0.12,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                9.0,
+                0.12,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                9.0,
+                0.06,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                9.0,
+                0.03,
+                800.0,
+                1.1
+            ],
+            [
+                250.0,
+                9.0,
+                0.03,
+                800.0,
+                1.2
+            ]
+        ],
+        "y": [
+            [
+                0.2,
+                17.7,
+                26.7,
+                55.4,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.1,
+                14.4,
+                24.0,
+                61.4,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.3,
+                10.5,
+                19.8,
+                69.4,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                6.2,
+                10.0,
+                83.5,
+                0.0,
+                0.0,
+                0.1
+            ],
+            [
+                0.2,
+                8.3,
+                17.9,
+                73.6,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                6.0,
+                12.8,
+                80.9,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                3.9,
+                6.2,
+                89.3,
+                0.2,
+                0.0,
+                0.1
+            ],
+            [
+                0.1,
+                2.6,
+                5.6,
+                90.6,
+                0.5,
+                0.1,
+                0.6
+            ],
+            [
+                0.2,
+                4.6,
+                9.6,
+                85.5,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                7.0,
+                15.4,
+                77.4,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                7.2,
+                16.4,
+                76.2,
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "y_model_mean": [
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ]
+        ],
+        "y_model_std": [
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ],
+            [
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN,
+                NaN
+            ]
+        ],
+        "ei_sum": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "experts": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "sim_energy": [
+            101277.05759435313,
+            94052.21148455369,
+            99961.37878048304,
+            93216.94734387436,
+            96396.6711843551,
+            96753.07497964203,
+            106930.3860449385,
+            104884.24601660481,
+            103005.40738040954,
+            105212.0726138698,
+            98813.65234309484
+        ],
+        "train_energy": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "progress": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+        ],
+        "elapsed_seconds": [
+            808.3278832435608,
+            823.3496479988098,
+            843.3371925354004,
+            813.3369307518005,
+            813.3508083820343,
+            853.3145751953125,
+            913.3338048458099,
+            853.3543124198914,
+            873.3334884643555,
+            903.3554019927979,
+            803.3251321315765
+        ]
+    }
+}

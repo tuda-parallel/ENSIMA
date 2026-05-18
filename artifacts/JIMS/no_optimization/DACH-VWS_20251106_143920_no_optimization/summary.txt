@@ -1,0 +1,98 @@
+
+========================================================================================================================
+                   Optimization Summary                    
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric           ┃                                Value ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Optimization Job │                             DACH-VWS │
+│ Date             │                  2025-11-06 16:56:29 │
+│ Best Output      │ [38.7 34.2 15.8 11.2  0.   0.   0. ] │
+│ Best Input       │      [140.    3.    0.    0.    0.7] │
+│ Total iterations │                                    4 │
+│ Total Sim Energy │                           958.378 kJ │
+│ Total Sim Energy │                          0.000e+00 J │
+│ Total CO₂        │                            212.973 g │
+│ Total Time       │                             02:17:04 │
+└──────────────────┴──────────────────────────────────────┘
+
+
+
+                                                                            Samples                                                                            
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓
+┃                     ┃                     ┃  Y Mean Predicted  ┃                     ┃      ┃             ┃               ┃          ┃           ┃          ┃
+┃                     ┃  Y (L1 L2 L3 L4 L5  ┃ (L1 L2 L3 L4 L5 L6 ┃ Y STD Predicted (L1 ┃      ┃             ┃               ┃          ┃           ┃          ┃
+┃  X (Rp p Fr db D)   ┃       L6 L7)        ┃        L7)         ┃ L2 L3 L4 L5 L6 L7)  ┃  EI  ┃  Sim Energy ┃  Train Energy ┃      CO₂ ┃  Progress ┃     Time ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩
+│  [140.    3.    0.  │   [38.7 34.2 15.8   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  212.172 kJ │   0.000e+00 J │ 47.149 g │    100.0% │ 00:30:33 │
+│     0.    0.7]      │ 11.2  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│                     │          ]          │                    │                     │      │             │               │          │           │          │
+│  [140.    3.    0.  │   [14.1 13.2 10.5   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  255.345 kJ │   0.000e+00 J │ 56.743 g │    100.0% │ 00:37:28 │
+│    220.    0.7]     │ 62.1  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│                     │          ]          │                    │                     │      │             │               │          │           │          │
+│  [1.4e+02 6.0e+00   │   [ 0.9  9.9  7.7   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  239.280 kJ │   0.000e+00 J │ 53.173 g │    100.0% │ 00:33:38 │
+│   3.0e-02 2.2e+02   │ 81.5  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      7.0e-01]       │          ]          │                    │                     │      │             │               │          │           │          │
+│  [1.4e+02 9.0e+00   │   [ 0.5  2.6  9.1   │  [nan nan nan nan  │  [nan nan nan nan   │ 0.00 │  251.581 kJ │   0.000e+00 J │ 55.907 g │    100.0% │ 00:35:23 │
+│   6.0e-02 2.2e+02   │ 87.8  0.   0.   0.  │    nan nan nan]    │    nan nan nan]     │      │             │               │          │           │          │
+│      7.0e-01]       │          ]          │                    │                     │      │             │               │          │           │          │
+└─────────────────────┴─────────────────────┴────────────────────┴─────────────────────┴──────┴─────────────┴───────────────┴──────────┴───────────┴──────────┘
+
+
+
+                                                        Optimization arguments                                                         
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                      ┃                                                                                                 Value ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ x_fields                    │                                                                          ['Rp', 'p', 'Fr', 'db', 'D'] │
+│ y_fields                    │                                                            ['L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7'] │
+│ attention_coefficients      │                                                                                [1. 1. 1. 1. 1. 1. 1.] │
+│ approximate_computing_check │                                                                                                  None │
+│ approximate_computing_limit │                                                                                                  None │
+│ target                      │                                                                                                  None │
+│ user_constraints            │           {'D': (0.5, 0.8), 'p': (1.0, 10), 'Fr': (0.0, 0.15), 'Rp': [270, 420, 890], 'db': (0, 800)} │
+│ ofsolver                    │      /home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe │
+│ jobname                     │                                                                                              DACH-VWS │
+│ cores                       │                                                                                                    48 │
+│ energy_estimation           │                                                                                                  True │
+│ openform                    │                  /home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch │
+│ session                     │                                                                                  DACH-VWS-Session.ofs │
+│ path                        │ /home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01 │
+│ output                      │                       /home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_expert.csv │
+│ result_folder               │                                   /home/ahmadtarraf/ensima-code/optimization/DACH-VWS_20251106_143920 │
+│ geometry_path               │                                                                                                  None │
+│ end_condition               │                                                                                        no_improvement │
+│ end_value                   │                                                                                                 100.0 │
+│ time_limit                  │                                                                                              04:00:00 │
+│ plot                        │                                                                                                 False │
+│ save_and_load               │                                                                                                 False │
+│ iterations                  │                                                                                                     4 │
+│ parallel_samples            │                                                                                                     1 │
+│ method                      │                                                                                                    bo │
+│ x_space_point_creation      │                                                                                           combination │
+│ x_space_n_samples           │                                                                                                 10000 │
+│ x_space_structure           │                                                                                                  grid │
+│ x_space_expansion_factor    │                                                                                                   0.1 │
+│ x_space_precision           │                                                                                                     3 │
+│ sample_mode                 │                                                                                            downsample │
+│ epochs                      │                                                                                                   100 │
+│ latent_input_dim            │                                                                                                  None │
+│ latent_output_dim           │                                                                                                  None │
+│ log_level                   │                                                                                                 DEBUG │
+│ log_file                    │                          /home/ahmadtarraf/ensima-code/optimization/logs/DACH-VWS_20251106_143920.log │
+│ watcher_backend             │                                                                                                logger │
+│ license_server_service      │                                                                                                 False │
+│ license_server              │                                                                                              rms14562 │
+│ license_port                │                                                                                                  5053 │
+│ license_type                │                                                                                                   RLM │
+│ license_rlm                 │                      /home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm │
+│ selection_strategy          │                                                                                     crowding_distance │
+│ full_cov                    │                                                                                                 False │
+│ n_samples_mc                │                                                                                                 10000 │
+│ new_expert_start            │                                                                                                     2 │
+│ input                       │                                                                                                    [] │
+└─────────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+
+

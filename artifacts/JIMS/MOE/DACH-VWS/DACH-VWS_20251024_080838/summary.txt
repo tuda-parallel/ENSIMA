@@ -1,0 +1,113 @@
+
+========================================================================================================================
+                   Optimization Summary                    
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric           ┃                                Value ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Optimization Job │                             DACH-VWS │
+│ Date             │                  2025-10-25 00:24:40 │
+│ Target           │ [  0.  10.  50. 100.  50.   0.   0.] │
+│ Best Output      │ [ 0.   0.   5.9 94.1  0.   0.   0. ] │
+│ Best Input       │                     [ 0.1 10.   0.8] │
+│ Total iterations │                                   10 │
+│ Total Energy     │                             6.979 MJ │
+│ Total CO₂        │                             1.551 kg │
+│ Total Time       │                             16:15:05 │
+└──────────────────┴──────────────────────────────────────┘
+
+
+
+                                                                            Samples                                                                            
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓
+┃    X (Fr p D)    ┃       Y (L1 L2 L3 L4 L5 L6 L7)       ┃   EI    ┃                 Experts                 ┃     Energy ┃       CO₂ ┃  Progress ┃     Time ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩
+│  [0.1 5.7 0.7]   │ [ 0.6  3.5  8.  88.   0.   0.   0. ] │ 649.92  │  10.4% BSaeule, 13.8% RadhausAdapter,   │ 536.651 kJ │ 119.256 g │    100.0% │ 01:15:55 │
+│                  │                                      │         │        14.1% Quertraeger, 17.8%         │            │           │           │          │
+│                  │                                      │         │          FrontFender_01, 18.7%          │            │           │           │          │
+│                  │                                      │         │        Heckklappe_aussen, 22.7%         │            │           │           │          │
+│                  │                                      │         │            Tankdeckeleinsatz            │            │           │           │          │
+│  [0.1 9.1 0.8]   │ [ 0.1  0.   7.1 92.8  0.   0.   0. ] │ 1093.35 │  10.4% BSaeule, 13.8% RadhausAdapter,   │ 467.774 kJ │ 103.950 g │    100.0% │ 01:06:38 │
+│                  │                                      │         │        14.1% Quertraeger, 17.8%         │            │           │           │          │
+│                  │                                      │         │          FrontFender_01, 18.7%          │            │           │           │          │
+│                  │                                      │         │        Heckklappe_aussen, 22.7%         │            │           │           │          │
+│                  │                                      │         │            Tankdeckeleinsatz            │            │           │           │          │
+│  [0.1 8.5 0.8]   │ [ 0.2  0.   7.8 92.   0.   0.   0. ] │ 618.01  │  10.4% BSaeule, 13.8% RadhausAdapter,   │ 453.979 kJ │ 100.884 g │    100.0% │ 01:02:28 │
+│                  │                                      │         │        14.1% Quertraeger, 17.8%         │            │           │           │          │
+│                  │                                      │         │          FrontFender_01, 18.7%          │            │           │           │          │
+│                  │                                      │         │        Heckklappe_aussen, 22.7%         │            │           │           │          │
+│                  │                                      │         │            Tankdeckeleinsatz            │            │           │           │          │
+│  [0.1 7.  0.7]   │ [ 0.6  2.2  7.  90.2  0.   0.   0. ] │ 559.13  │  10.4% BSaeule, 13.8% RadhausAdapter,   │ 746.718 kJ │ 165.937 g │    100.0% │ 01:49:14 │
+│                  │                                      │         │        14.1% Quertraeger, 17.8%         │            │           │           │          │
+│                  │                                      │         │          FrontFender_01, 18.7%          │            │           │           │          │
+│                  │                                      │         │        Heckklappe_aussen, 22.7%         │            │           │           │          │
+│                  │                                      │         │            Tankdeckeleinsatz            │            │           │           │          │
+│  [0.1 4.9 0.6]   │ [ 0.8  5.5  5.9 87.8  0.   0.   0. ] │ 474.54  │  10.4% BSaeule, 13.8% RadhausAdapter,   │ 907.990 kJ │ 201.775 g │    100.0% │ 02:08:39 │
+│                  │                                      │         │        14.1% Quertraeger, 17.8%         │            │           │           │          │
+│                  │                                      │         │          FrontFender_01, 18.7%          │            │           │           │          │
+│                  │                                      │         │        Heckklappe_aussen, 22.7%         │            │           │           │          │
+│                  │                                      │         │            Tankdeckeleinsatz            │            │           │           │          │
+│  [0.2 9.5 0.8]   │ [ 1.   0.   3.3 95.8  0.   0.   0. ] │  2.88   │             100.0% DACH-VWS             │   1.231 MJ │ 273.457 g │     84.9% │ 02:49:59 │
+│ [ 0.2 10.   0.8] │ [ 1.   0.   2.8 96.2  0.   0.   0. ] │  13.50  │             100.0% DACH-VWS             │   1.280 MJ │ 284.367 g │    85.78% │ 02:50:54 │
+│ [ 0.1 10.   0.8] │ [ 0.   0.   5.9 94.1  0.   0.   0. ] │  11.45  │             100.0% DACH-VWS             │ 406.423 kJ │  90.316 g │    100.0% │ 00:59:03 │
+│  [0.1 9.9 0.8]   │ [ 0.   0.   6.1 93.9  0.   0.   0. ] │  9.82   │             100.0% DACH-VWS             │ 469.783 kJ │ 104.396 g │    100.0% │ 01:03:38 │
+│  [0.1 9.8 0.8]   │ [ 0.   0.   6.3 93.7  0.   0.   0. ] │  9.16   │             100.0% DACH-VWS             │ 479.361 kJ │ 106.525 g │    100.0% │ 01:07:33 │
+└──────────────────┴──────────────────────────────────────┴─────────┴─────────────────────────────────────────┴────────────┴───────────┴───────────┴──────────┘
+
+
+
+                                                               Optimization arguments                                                               
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                      ┃                                                                                                              Value ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ x_fields                    │                                                                                                   ['Fr', 'p', 'D'] │
+│ y_fields                    │                                                                         ['L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7'] │
+│ attention_coefficients      │                                                                        [ 1.    0.01  0.05 -0.2   0.05  1.    1.  ] │
+│ approximate_computing_check │                                                                                                             [90.0] │
+│ approximate_computing_limit │                                                                      [15.0, 100.0, 100.0, 100.0, 100.0, 0.1, 0.01] │
+│ target                      │                                                                           [0.0, 10.0, 50.0, 100.0, 50.0, 0.0, 0.0] │
+│ user_constraints            │                        {'D': (0.5, 0.8), 'p': (1.0, 10), 'Fr': (0.0, 0.15), 'Rp': [270, 420, 890], 'db': (0, 800)} │
+│ ofsolver                    │                   /home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe │
+│ jobname                     │                                                                                                           DACH-VWS │
+│ cores                       │                                                                                                                 48 │
+│ energy_estimation           │                                                                                                               True │
+│ openform                    │                               /home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch │
+│ session                     │                                                                                               DACH-VWS-Session.ofs │
+│ path                        │              /home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01 │
+│ output                      │                                   /home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv │
+│ result_folder               │                                                /home/ahmadtarraf/ensima-code/optimization/DACH-VWS_20251024_080838 │
+│ geometry_path               │ /home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52 │
+│ end_condition               │                                                                                                     no_improvement │
+│ end_value                   │                                                                                                                  5 │
+│ time_limit                  │                                                                                                           08:00:00 │
+│ plot                        │                                                                                                               True │
+│ save_and_load               │                                                                                                              False │
+│ iterations                  │                                                                                                                 10 │
+│ parallel_samples            │                                                                                                                  1 │
+│ method                      │                                                                                                                 bo │
+│ x_space_structure           │                                                                                                               grid │
+│ x_space_point_creation      │                                                                                                             linear │
+│ x_space_n_samples           │                                                                                                              10000 │
+│ x_space_expansion_factor    │                                                                                                                0.1 │
+│ x_space_precision           │                                                                                                                  1 │
+│ sample_mode                 │                                                                                                           upsample │
+│ epochs                      │                                                                                                                300 │
+│ latent_input_dim            │                                                                                                                  6 │
+│ latent_output_dim           │                                                                                                               None │
+│ log_level                   │                                                                                                              DEBUG │
+│ log_file                    │                                       /home/ahmadtarraf/ensima-code/optimization/logs/DACH-VWS_20251024_080838.log │
+│ watcher_backend             │                                                                                                             logger │
+│ license_server_service      │                                                                                                              False │
+│ license_server              │                                                                                                           rms14562 │
+│ license_port                │                                                                                                               5053 │
+│ license_type                │                                                                                                                RLM │
+│ license_rlm                 │                                   /home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm │
+│ selection_strategy          │                                                                                                  crowding_distance │
+│ new_expert_start            │                                                                                                                  5 │
+│ Embdeing dim                │                                                                                                               5000 │
+│ Point cloud size            │                                                                                                      723603 points │
+└─────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+
+

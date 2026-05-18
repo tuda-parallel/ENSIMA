@@ -1,0 +1,1172 @@
+{
+    "sim_01": {
+        "jobname": "DACH-VWS",
+        "date": "2025-10-23 09:11:15",
+        "target": [
+            0.0,
+            10.0,
+            50.0,
+            100.0,
+            50.0,
+            0.0,
+            0.0
+        ],
+        "best_output": [
+            0.5,
+            1.7000000000000002,
+            5.3,
+            92.6,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "best_input": [
+            0.1,
+            9.9,
+            0.7
+        ],
+        "total_iterations": 10,
+        "energy": [
+            1151535.6714080137,
+            503167.5697376371,
+            465522.64361029747,
+            1387537.3416645506,
+            446277.42697324377,
+            772524.108630014,
+            1452229.3075620066,
+            493324.0676652385,
+            1535483.839100736,
+            1521128.4503427164
+        ],
+        "co2": [
+            255.8968158684475,
+            111.8150154972527,
+            103.44947635784388,
+            308.34163148101123,
+            99.17276154960972,
+            171.67202414000312,
+            322.71762390266815,
+            109.62757059227523,
+            341.21863091127466,
+            338.02854452060365
+        ],
+        "total_time": "22:57:26",
+        "total_time_in_seconds": 82646,
+        "args": {
+            "x_fields": [
+                "Fr",
+                "p",
+                "D"
+            ],
+            "y_fields": [
+                "L1",
+                "L2",
+                "L3",
+                "L4",
+                "L5",
+                "L6",
+                "L7"
+            ],
+            "attention_coefficients": [
+                1.0,
+                0.01,
+                0.05,
+                -0.2,
+                0.05,
+                1.0,
+                1.0
+            ],
+            "approximate_computing_check": [
+                90.0
+            ],
+            "approximate_computing_limit": [
+                15.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                0.1,
+                0.01
+            ],
+            "target": [
+                0.0,
+                10.0,
+                50.0,
+                100.0,
+                50.0,
+                0.0,
+                0.0
+            ],
+            "user_constraints": {
+                "D": [
+                    0.5,
+                    0.8
+                ],
+                "p": [
+                    1.0,
+                    10
+                ],
+                "Fr": [
+                    0.0,
+                    0.15
+                ],
+                "Rp": [
+                    270,
+                    420,
+                    890
+                ],
+                "db": [
+                    0,
+                    800
+                ]
+            },
+            "ofsolver": "/home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
+            "jobname": "DACH-VWS",
+            "cores": 48,
+            "energy_estimation": true,
+            "openform": "/home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
+            "session": "DACH-VWS-Session.ofs",
+            "path": "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01",
+            "output": "/home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv",
+            "result_folder": "/home/ahmadtarraf/ensima-code/optimization/DACH-VWS_20251022_101255",
+            "geometry_path": "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",
+            "end_condition": "no_improvement",
+            "end_value": 5,
+            "time_limit": "08:00:00",
+            "plot": true,
+            "save_and_load": false,
+            "iterations": 10,
+            "parallel_samples": 1,
+            "method": "bo",
+            "x_space_structure": "grid",
+            "x_space_point_creation": "linear",
+            "x_space_n_samples": 10000,
+            "x_space_expansion_factor": 0.1,
+            "x_space_precision": 1,
+            "sample_mode": "upsample",
+            "epochs": 300,
+            "latent_input_dim": 6,
+            "latent_output_dim": null,
+            "log_level": "DEBUG",
+            "log_file": "/home/ahmadtarraf/ensima-code/optimization/logs/DACH-VWS_20251022_101255.log",
+            "watcher_backend": "logger",
+            "license_server_service": false,
+            "license_server": "rms14562",
+            "license_port": "5053",
+            "license_type": "RLM",
+            "license_rlm": "/home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm ",
+            "selection_strategy": "crowding_distance",
+            "new_expert_start": 3,
+            "Embedding dim": 5000,
+            "Point cloud size": "723603 points"
+        },
+        "best_iteration": 10,
+        "x": [
+            [
+                0.2,
+                10.0,
+                0.8
+            ],
+            [
+                0.1,
+                10.0,
+                0.8
+            ],
+            [
+                0.1,
+                9.3,
+                0.8
+            ],
+            [
+                0.1,
+                9.2,
+                0.5
+            ],
+            [
+                0.1,
+                9.9,
+                0.8
+            ],
+            [
+                0.1,
+                9.9,
+                0.7
+            ],
+            [
+                0.1,
+                9.1,
+                0.5
+            ],
+            [
+                0.1,
+                9.8,
+                0.8
+            ],
+            [
+                0.1,
+                9.0,
+                0.5
+            ],
+            [
+                0.1,
+                8.9,
+                0.5
+            ]
+        ],
+        "y": [
+            [
+                1.0,
+                0.0,
+                3.1000000000000005,
+                95.8,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                5.9,
+                94.1,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.8,
+                93.2,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                1.5,
+                3.2,
+                2.4,
+                93.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.000000000000001,
+                94.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.5,
+                1.7000000000000002,
+                5.3,
+                92.6,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                1.4,
+                3.1,
+                2.4,
+                93.1,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.200000000000001,
+                93.8,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                1.3,
+                3.2,
+                2.3,
+                93.3,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                1.5,
+                3.1,
+                2.4,
+                92.9,
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "ei_sum": [
+            780.3834942339515,
+            709.2161319460465,
+            615.1012919460024,
+            1.571667710106895,
+            3.1005062388609708,
+            3.0132906407381053,
+            2.281784799023727,
+            2.826667270811487,
+            2.0336533379154007,
+            1.9824419166350276
+        ],
+        "experts": [
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            }
+        ],
+        "progress": [
+            83.52,
+            100.0,
+            100.0,
+            95.81,
+            100.0,
+            100.0,
+            96.77,
+            100.0,
+            98.59,
+            95.9
+        ],
+        "elapsed_seconds": [
+            9976.087815284729,
+            4053.869883298874,
+            3853.8765046596527,
+            12199.78958773613,
+            3723.790888786316,
+            6429.123686075211,
+            12704.83379817009,
+            4108.859908342361,
+            13174.89119887352,
+            12379.86240363121
+        ]
+    },
+    "sim_02": {
+        "jobname": "DACH-VWS",
+        "date": "2025-10-23 22:19:54",
+        "target": [
+            0.0,
+            10.0,
+            50.0,
+            100.0,
+            50.0,
+            0.0,
+            0.0
+        ],
+        "best_output": [
+            0.5,
+            4.0,
+            8.0,
+            87.5,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "best_input": [
+            0.1,
+            5.5,
+            0.7
+        ],
+        "total_iterations": 10,
+        "energy": [
+            569885.3592870358,
+            486077.71304715413,
+            1124147.3399266757,
+            424794.72430705675,
+            473051.38099037576,
+            514950.3854428155,
+            399037.79733587865,
+            487227.7691618884,
+            449671.53437584935,
+            441447.78412429796
+        ],
+        "co2": [
+            126.6411909526746,
+            108.01726956603426,
+            249.8105199837057,
+            94.3988276237904,
+            105.1225291089724,
+            114.43341898729233,
+            88.6750660746397,
+            108.27283759153075,
+            99.92700763907763,
+            98.09950758317733
+        ],
+        "total_time": "13:03:59",
+        "total_time_in_seconds": 47039,
+        "args": {
+            "x_fields": [
+                "Fr",
+                "p",
+                "D"
+            ],
+            "y_fields": [
+                "L1",
+                "L2",
+                "L3",
+                "L4",
+                "L5",
+                "L6",
+                "L7"
+            ],
+            "attention_coefficients": [
+                1.0,
+                0.01,
+                0.05,
+                -0.2,
+                0.05,
+                1.0,
+                1.0
+            ],
+            "approximate_computing_check": [
+                90.0
+            ],
+            "approximate_computing_limit": [
+                15.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                0.1,
+                0.01
+            ],
+            "target": [
+                0.0,
+                10.0,
+                50.0,
+                100.0,
+                50.0,
+                0.0,
+                0.0
+            ],
+            "user_constraints": {
+                "D": [
+                    0.5,
+                    0.8
+                ],
+                "p": [
+                    1.0,
+                    10
+                ],
+                "Fr": [
+                    0.0,
+                    0.15
+                ],
+                "Rp": [
+                    270,
+                    420,
+                    890
+                ],
+                "db": [
+                    0,
+                    800
+                ]
+            },
+            "ofsolver": "/home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
+            "jobname": "DACH-VWS",
+            "cores": 48,
+            "energy_estimation": true,
+            "openform": "/home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
+            "session": "DACH-VWS-Session.ofs",
+            "path": "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01",
+            "output": "/home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv",
+            "result_folder": "/home/ahmadtarraf/ensima-code/optimization/DACH-VWS_20251023_091501",
+            "geometry_path": "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",
+            "end_condition": "no_improvement",
+            "end_value": 5,
+            "time_limit": "08:00:00",
+            "plot": true,
+            "save_and_load": false,
+            "iterations": 10,
+            "parallel_samples": 1,
+            "method": "bo",
+            "x_space_structure": "grid",
+            "x_space_point_creation": "linear",
+            "x_space_n_samples": 10000,
+            "x_space_expansion_factor": 0.1,
+            "x_space_precision": 1,
+            "sample_mode": "upsample",
+            "epochs": 300,
+            "latent_input_dim": 6,
+            "latent_output_dim": null,
+            "log_level": "DEBUG",
+            "log_file": "/home/ahmadtarraf/ensima-code/optimization/logs/DACH-VWS_20251023_091501.log",
+            "watcher_backend": "logger",
+            "license_server_service": false,
+            "license_server": "rms14562",
+            "license_port": "5053",
+            "license_type": "RLM",
+            "license_rlm": "/home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm ",
+            "selection_strategy": "crowding_distance",
+            "new_expert_start": 1,
+            "Embedding dim": 5000,
+            "Point cloud size": "723603 points"
+        },
+        "best_iteration": 3,
+        "x": [
+            [
+                0.1,
+                5.5,
+                0.7
+            ],
+            [
+                0.1,
+                10.0,
+                0.8
+            ],
+            [
+                0.2,
+                10.0,
+                0.8
+            ],
+            [
+                0.1,
+                9.9,
+                0.8
+            ],
+            [
+                0.1,
+                9.8,
+                0.8
+            ],
+            [
+                0.1,
+                9.7,
+                0.8
+            ],
+            [
+                0.1,
+                9.6,
+                0.8
+            ],
+            [
+                0.1,
+                9.5,
+                0.8
+            ],
+            [
+                0.1,
+                9.4,
+                0.8
+            ],
+            [
+                0.1,
+                9.3,
+                0.8
+            ]
+        ],
+        "y": [
+            [
+                0.5,
+                4.0,
+                8.0,
+                87.5,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.000000000000001,
+                94.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                1.0,
+                0.0,
+                3.1000000000000005,
+                95.9,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.000000000000001,
+                94.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.200000000000001,
+                93.8,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.200000000000001,
+                93.7,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.400000000000001,
+                93.6,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.5,
+                93.4,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.6,
+                93.3,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.8,
+                93.2,
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "ei_sum": [
+            730.4925941556432,
+            216.12868774313202,
+            10.869344949635261,
+            9.400691616531795,
+            9.947912547835411,
+            10.532201002298628,
+            10.02922651236697,
+            9.054496083498286,
+            5.636396433295189,
+            8.449338672675779
+        ],
+        "experts": [
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            }
+        ],
+        "progress": [
+            100.0,
+            100.0,
+            84.53,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0
+        ],
+        "elapsed_seconds": [
+            4885.500659704208,
+            4303.926747560501,
+            10189.547907114029,
+            3783.7874703407288,
+            3973.859044075012,
+            4488.90723490715,
+            3538.7906243801117,
+            4313.9127242565155,
+            3758.776150226593,
+            3778.8476333618164
+        ]
+    },
+    "sim_03": {
+        "jobname": "DACH-VWS",
+        "date": "2025-10-25 00:24:40",
+        "target": [
+            0.0,
+            10.0,
+            50.0,
+            100.0,
+            50.0,
+            0.0,
+            0.0
+        ],
+        "best_output": [
+            0.0,
+            0.0,
+            5.9,
+            94.1,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "best_input": [
+            0.1,
+            10.0,
+            0.8
+        ],
+        "total_iterations": 10,
+        "energy": [
+            536651.4422921411,
+            467774.14437942836,
+            453978.7696974814,
+            746718.0108317381,
+            907989.7431286069,
+            1230557.2923194927,
+            1279649.8051558475,
+            406422.8779845469,
+            469783.1990739776,
+            479360.74311553285
+        ],
+        "co2": [
+            119.25587606492026,
+            103.9498098620952,
+            100.88417104388476,
+            165.93733574038626,
+            201.7754984730238,
+            273.4571760709984,
+            284.3666233679661,
+            90.31619510767709,
+            104.39626646088391,
+            106.52460958122951
+        ],
+        "total_time": "16:15:05",
+        "total_time_in_seconds": 58505,
+        "args": {
+            "x_fields": [
+                "Fr",
+                "p",
+                "D"
+            ],
+            "y_fields": [
+                "L1",
+                "L2",
+                "L3",
+                "L4",
+                "L5",
+                "L6",
+                "L7"
+            ],
+            "attention_coefficients": [
+                1.0,
+                0.01,
+                0.05,
+                -0.2,
+                0.05,
+                1.0,
+                1.0
+            ],
+            "approximate_computing_check": [
+                90.0
+            ],
+            "approximate_computing_limit": [
+                15.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                0.1,
+                0.01
+            ],
+            "target": [
+                0.0,
+                10.0,
+                50.0,
+                100.0,
+                50.0,
+                0.0,
+                0.0
+            ],
+            "user_constraints": {
+                "D": [
+                    0.5,
+                    0.8
+                ],
+                "p": [
+                    1.0,
+                    10
+                ],
+                "Fr": [
+                    0.0,
+                    0.15
+                ],
+                "Rp": [
+                    270,
+                    420,
+                    890
+                ],
+                "db": [
+                    0,
+                    800
+                ]
+            },
+            "ofsolver": "/home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
+            "jobname": "DACH-VWS",
+            "cores": 48,
+            "energy_estimation": true,
+            "openform": "/home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
+            "session": "DACH-VWS-Session.ofs",
+            "path": "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01",
+            "output": "/home/ahmadtarraf/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv",
+            "result_folder": "/home/ahmadtarraf/ensima-code/optimization/DACH-VWS_20251024_080838",
+            "geometry_path": "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",
+            "end_condition": "no_improvement",
+            "end_value": 5,
+            "time_limit": "08:00:00",
+            "plot": true,
+            "save_and_load": false,
+            "iterations": 10,
+            "parallel_samples": 1,
+            "method": "bo",
+            "x_space_structure": "grid",
+            "x_space_point_creation": "linear",
+            "x_space_n_samples": 10000,
+            "x_space_expansion_factor": 0.1,
+            "x_space_precision": 1,
+            "sample_mode": "upsample",
+            "epochs": 300,
+            "latent_input_dim": 6,
+            "latent_output_dim": null,
+            "log_level": "DEBUG",
+            "log_file": "/home/ahmadtarraf/ensima-code/optimization/logs/DACH-VWS_20251024_080838.log",
+            "watcher_backend": "logger",
+            "license_server_service": false,
+            "license_server": "rms14562",
+            "license_port": "5053",
+            "license_type": "RLM",
+            "license_rlm": "/home/ahmadtarraf/ensima-code/test_data/gns/gns_rlm_v15.2_R1_install_linux64/rlm ",
+            "selection_strategy": "crowding_distance",
+            "new_expert_start": 5,
+            "Embedding dim": 5000,
+            "Point cloud size": "723603 points"
+        },
+        "best_iteration": 10,
+        "x": [
+            [
+                0.1,
+                5.7,
+                0.7
+            ],
+            [
+                0.1,
+                9.1,
+                0.8
+            ],
+            [
+                0.1,
+                8.5,
+                0.8
+            ],
+            [
+                0.1,
+                7.0,
+                0.7
+            ],
+            [
+                0.1,
+                4.9,
+                0.6
+            ],
+            [
+                0.2,
+                9.5,
+                0.8
+            ],
+            [
+                0.2,
+                10.0,
+                0.8
+            ],
+            [
+                0.1,
+                10.0,
+                0.8
+            ],
+            [
+                0.1,
+                9.9,
+                0.8
+            ],
+            [
+                0.1,
+                9.8,
+                0.8
+            ]
+        ],
+        "y": [
+            [
+                0.6,
+                3.5000000000000004,
+                8.0,
+                88.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.1,
+                0.0,
+                7.1,
+                92.79999999999998,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.2,
+                0.0,
+                7.8,
+                92.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.6,
+                2.2,
+                7.0,
+                90.2,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.8,
+                5.5,
+                5.9,
+                87.79999999999998,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                1.0,
+                0.0,
+                3.3,
+                95.8,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                1.0,
+                0.0,
+                2.7999999999999994,
+                96.2,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                5.9,
+                94.1,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.1,
+                93.9,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                6.3,
+                93.7,
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "ei_sum": [
+            649.9249993070796,
+            1093.3452797137209,
+            618.0094436254819,
+            559.1311193237505,
+            474.5364691790308,
+            2.8755521047347097,
+            13.501493259464038,
+            11.452620408494408,
+            9.8164548157752,
+            9.160354191276163
+        ],
+        "experts": [
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "BSaeule": 0.10384933650493622,
+                "RadhausAdapter": 0.1383523792028427,
+                "Quertraeger": 0.1405777633190155,
+                "FrontFender_01": 0.17815880477428436,
+                "Heckklappe_aussen": 0.18718186020851135,
+                "Tankdeckeleinsatz": 0.22738182544708252
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            },
+            {
+                "DACH-VWS": 1.0
+            }
+        ],
+        "progress": [
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            100.0,
+            84.9,
+            85.78,
+            100.0,
+            100.0,
+            100.0
+        ],
+        "elapsed_seconds": [
+            4555.454488992691,
+            3998.8954899311066,
+            3748.8966097831726,
+            6554.253719329834,
+            7719.418607473373,
+            10199.617053031921,
+            10254.508787155151,
+            3543.7937371730804,
+            3818.8155086040497,
+            4053.9171109199524
+        ]
+    }
+}
