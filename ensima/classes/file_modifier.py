@@ -587,7 +587,7 @@ def comment_line(line: str):
 
 if __name__ == "__main__":
 
-    path = "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat/ASaeule.dat"
+    path = "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat/ASaeule.dat"
     f = FileModifier(path, log_level="DEBUG")
     # modify
     f.set_design_parameters({"Fr": 0.01})
@@ -603,7 +603,7 @@ if __name__ == "__main__":
     f.set_blank_thickness(0.7)
     f.print()
 
-    path = "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_04/Einleger.dat"
+    path = "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04/Einleger.dat"
     f = FileModifier(path, log_level="DEBUG")
     # modify
     Fr = f.design_parameters["Fr"]["values"][-1]

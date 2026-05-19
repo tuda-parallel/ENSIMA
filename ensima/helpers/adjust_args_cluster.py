@@ -22,7 +22,7 @@ local_hostname = "electric"
 def adjust_parts_for_cluster(
     args: Namespace,
     parts: list[tuple[str, str]] = None,
-    old="/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
+    old="/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark",
     # new="/rwthfs/rz/cluster/home/cg021604/gns/TCO-Benchmark",
     new="/rwthfs/rz/cluster/home/qfw89470/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
 ):
@@ -69,16 +69,16 @@ def adjust_args_for_aachen_cluster(args: Namespace) -> Namespace:
     #     "/rwthfs/rz/cluster/home/cg021604/gns/OpenForm_daily_linux64/OpenForm_64_batch"
     # )
     # args.path = args.path.replace(
-    #     "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
+    #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark",
     #     "/rwthfs/rz/cluster/home/cg021604/gns/TCO-Benchmark",
     # )
     # args.output = args.output.replace(
-    #     "/d/gitlab/ensima-code/optimization/test/csv",
+    #     "/d/github/ENSIMA/test/csv",
     #     "/rwthfs/rz/cluster/home/cg021604/ensima-code/optimization/test/csv",
     # )
     # if args.geometry_path is not None:
     #     args.geometry_path = args.geometry_path.replace(
-    #         "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
+    #         "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark",
     #         "/rwthfs/rz/cluster/home/cg021604/gns/TCO-Benchmark",
     #     )
     args.ofsolver = "/rwthfs/rz/cluster/home/qfw89470/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe"
@@ -86,16 +86,16 @@ def adjust_args_for_aachen_cluster(args: Namespace) -> Namespace:
         "/rwthfs/rz/cluster/home/qfw89470/gns/OpenForm_daily_linux64/OpenForm_64_batch"
     )
     args.path = args.path.replace(
-        "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
+        "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark",
         "/rwthfs/rz/cluster/home/qfw89470/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
     )
     args.output = args.output.replace(
-        "/d/gitlab/ensima-code/optimization/test/csv",
+        "/d/github/ENSIMA/test/csv",
         "/rwthfs/rz/cluster/home/qfw89470/ensima-code/optimization/test/csv",
     )
     if args.geometry_path is not None:
         args.geometry_path = args.geometry_path.replace(
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark",
             "/rwthfs/rz/cluster/home/qfw89470/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
         )
 
@@ -139,16 +139,16 @@ def adjust_args_for_gpu_server(args: Namespace) -> Namespace:
     args.ofsolver = "/home/ahmadtarraf/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe"
     args.openform = "/home/ahmadtarraf/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch"
     args.path = args.path.replace(
-        "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
+        "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark",
         "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
     )
     args.output = args.output.replace(
-        "/d/gitlab/ensima-code/optimization/test/csv",
+        "/d/github/ENSIMA/test/csv",
         "/home/ahmadtarraf/ensima-code/optimization/test/csv",
     )
     if args.geometry_path is not None:
         args.geometry_path = args.geometry_path.replace(
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark",
             "/home/ahmadtarraf/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark",
         )
     args.cores = 48

@@ -207,7 +207,7 @@ if __name__ == "__main__":
     args = parse_arguments(
         [
             "--path",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
             "-l",
             "DEBUG",
             "-j",
@@ -236,7 +236,7 @@ if __name__ == "__main__":
         f"cd {args.path} && {args.ofsolver} -j {args.jobname} -c 1"
     )
     logger.debug(f"Executing command: {command}")
-    app_log = "/d/gitlab/ensima-code/optimization/ensima/app.log"
+    app_log = "./app.log"
     with ProgressWatcher(log, log_level=args.log_level) as watcher:
         # process = execute_background(command, app_log, options={"check": False})
         # time.sleep(50)

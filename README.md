@@ -30,6 +30,8 @@ It applies Bayesian optimization with Gaussian Process Regression to accelerate 
 - **HPC support**: cluster-aware argument adjustment, license server management, energy monitoring
 - **Multi-objective optimization** with Pareto frontier analysis
 
+For a full breakdown of the repository structure and file descriptions, see [files.md](./files.md).
+
 ## Installation
 
 To install `ensima` in a virtual environment, use the `Makefile`:

@@ -33,7 +33,7 @@ def test_progress() -> None:
     args = parse_arguments(
         [
             "--path",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
             "-l",
             "DEBUG",
             "-j",
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     args = parse_arguments(
         [
             "--path",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
             "-l",
             "DEBUG",
             "-j",

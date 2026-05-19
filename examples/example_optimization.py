@@ -24,11 +24,11 @@ if __name__ == "__main__":
             "-ofm",
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             "-p",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_04",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_02",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_03",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03",
             "-j",
             # "Einleger",
             # "ASaeule",
@@ -45,8 +45,8 @@ if __name__ == "__main__":
             "48",
             "-e",
             "-o",
-            # "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML.csv",
-            "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML.csv",
+            # "/d/github/ENSIMA/test/csv/DataSets-AIandML.csv",
+            "/d/github/ENSIMA/test/csv/DataSets-AIandML.csv",
             "-l",
             "DEBUG",
             "-pl",
@@ -153,13 +153,11 @@ if __name__ == "__main__":
     # 2)filter by type
     # since the CSV is unlabeled, we filter by type.
     # Use ensima/helpers/complexity.py to find the type number.
-    # args.output = "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML.csv"
+    # args.output = "/d/github/ENSIMA/test/csv/DataSets-AIandML.csv"
     # args = adjust_args_for_cluster(args)
     # main(args, True, type_number=1)
 
     # 3) filter by part
-    args.output = (
-        "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv"
-    )
+    args.output = "/d/github/ENSIMA/test/csv/DataSets-AIandML_labeled.csv"
     args = adjust_args_for_cluster(args)
     main(args, True)

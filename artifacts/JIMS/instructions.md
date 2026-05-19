@@ -40,12 +40,17 @@ This guide explains:
   - All points that correspond to the **currently active expert** are used.
   - When the gating mechanism decides that a **new expert should be activated**, the newly assigned expert receives its corresponding points.
 - This means the dataset dynamically changes depending on which expert is active at each stage.
-"""
 
-## 4. Strucutre
-..
-├── CSV  --> CSV results
-├── instructions.md
-├── MLVGP --> Simulations results with MLVGP (inlcudes summary, log, JSON file, etc.)
-├── MOE --> Simulations results with MOE (inlcudes summary, log, JSON file, etc.)
-└── no_optimization --> Simulations results for the repeated runs with the same input configurations as the user/expert. This was needed for a fair energy comparision, to have the same machine.
+## 4. Structure
+
+```
+artifacts/JIMS/
+├── CSV/                  CSV results (labeled, unlabeled, expert)
+├── TCO-Benchmark/        Simulation input files (geometry, session, dat files)
+├── sim_results/
+│   ├── MLVGP/            Simulation results with MLVGP (summary, log, JSON, etc.)
+│   ├── MOE/              Simulation results with MOE (summary, log, JSON, etc.)
+│   └── no_optimization/  Repeated runs with the same expert/user input configurations,
+│                         used for a fair energy comparison on the same machine.
+└── instructions.md
+```

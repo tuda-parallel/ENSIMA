@@ -118,7 +118,7 @@ def read_data(
     Example:
         x_fields = ["Fr", "p"]
         y_fields = ["L1", "L2", "L3", "L4", "L5", "L6"]
-        x, y = read_data("/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML_20250401.csv", x_fields, y_fields, log_level="INFO")
+        x, y = read_data("/d/github/ENSIMA/test/csv/DataSets-AIandML_20250401.csv", x_fields, y_fields, log_level="INFO")
         print(x.shape, y.shape)
         (1654, 2) (1654, 6)
 
@@ -435,12 +435,12 @@ def check(log_level, x, y, x_fields, y_fields, ignored_fields, input_file):
 
 if __name__ == "__main__":
     logger = Logger(__name__, level="DEBUG").get()
-    # x, y = read_data("/d/gitlab/ensima-code/optimization/test/csv/DataSets.csv")
+    # x, y = read_data("/d/github/ENSIMA/test/csv/DataSets.csv")
 
     x_fields = ["Rp", "Fr", "p"]
     y_fields = ["L1", "L2", "L3", "L4", "L5", "L6"]
     x, y = read_data(
-        "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML_20250401.csv",
+        "/d/github/ENSIMA/test/csv/DataSets-AIandML_20250401.csv",
         x_fields,
         y_fields,
         log_level="INFO",
@@ -450,7 +450,7 @@ if __name__ == "__main__":
     logger.info(f"Rp = {np.unique(x[:,0])}")
 
     x, y, type = read_data_type(
-        "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv",
+        "/d/github/ENSIMA/test/csv/DataSets-AIandML_labeled.csv",
         x_fields,
         y_fields,
         log_level="INFO",

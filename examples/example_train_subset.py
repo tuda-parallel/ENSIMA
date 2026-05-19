@@ -22,8 +22,8 @@ from ensima.helpers.parse_args import parse_arguments
 from ensima.helpers.read_data import read_data
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-csv_file = "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML_20250401.csv"
-path = "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_02_Beam"
+csv_file = "/d/github/ENSIMA/test/csv/DataSets-AIandML_20250401.csv"
+path = "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_02_Beam"
 # Start license server as a service (../test_data/gns)
 args = parse_arguments(
     [

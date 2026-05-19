@@ -17,7 +17,7 @@ from ensima.helpers.adjust_args_cluster import adjust_args_for_cluster
 from ensima.helpers.parse_args import parse_arguments
 from ensima.helpers.read_data import read_data
 
-csv_file = "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML_20250401.csv"
+csv_file = "/d/github/ENSIMA/test/csv/DataSets-AIandML_20250401.csv"
 args = parse_arguments(
     [
         "-j",

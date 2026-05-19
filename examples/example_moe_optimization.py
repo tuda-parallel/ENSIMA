@@ -30,11 +30,11 @@ if __name__ == "__main__":
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             #
             "-p",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
             # "/d/gitlab/ensima-code/test_data/ensima-deata-main/OpenForm/TCO-Benchmark/PartType_04",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_02",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_03",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03",
             #
             "-j",
             # "ASaeule",
@@ -54,14 +54,14 @@ if __name__ == "__main__":
             "48",
             "-e",
             "-o",
-            "/d/gitlab/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv",
+            "/d/github/ENSIMA/test/csv/DataSets-AIandML_labeled.csv",
             #
             "-g",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat/Aseule.t52",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_04/Einleger.t52",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_02/Laengstraeger_02.t52",
-            # "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_03/SeatShell.t52",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat/Aseule.t52",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04/Einleger.t52",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02/Laengstraeger_02.t52",
+            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03/SeatShell.t52",
             #
             "-l",
             "DEBUG",
@@ -151,51 +151,51 @@ if __name__ == "__main__":
     parts = [
         (
             "ASaeule",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat/ASaeule.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat/ASaeule.t52",
         ),
         (
             "BSaeule",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_02_Beam/BSaeule_DX56D.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_02_Beam/BSaeule_DX56D.t52",
         ),
         (
             "RadhausAdapter",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_03_Deep/RadhausAdapter.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_03_Deep/RadhausAdapter.t52",
         ),
         # (
         #     "Einleger",
-        #     "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_04/Einleger.t52",
+        #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04/Einleger.t52",
         # ),
         # (
         #     "ASaeule_BSym",
-        #     "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/T52-PartFiles/A-Pilar.t52",
+        #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/A-Pilar.t52",
         # ),
         (
             "Quertraeger",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/T52-PartFiles/CrossBeam.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/CrossBeam.t52",
         ),
         (
             "FrontFender_01",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/T52-PartFiles/FrontFender_A.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/FrontFender_A.t52",
         ),
         (
             "Kotfluegel-DC",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/T52-PartFiles/FrontFender_B.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/FrontFender_B.t52",
         ),
         (
             "Heckklappe_aussen",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/T52-PartFiles/TailGate.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/TailGate.t52",
         ),
         (
             "Tankdeckeleinsatz",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/T52-PartFiles/TankCapInsert.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/TankCapInsert.t52",
         ),
         (
             "Tunnel_Passat",
-            "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/T52-PartFiles/Tunnel.t52",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/Tunnel.t52",
         ),
         # (
         #     "SeatShell",
-        #     "/d/gitlab/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/new_parts/PartType_03/SeatShell.t52",
+        #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03/SeatShell.t52",
         # ),
     ]
 
