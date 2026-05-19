@@ -34,12 +34,6 @@ debug: venv
 	.venv/bin/python -m pip install -e '.[optional-libs]'
 
 development: venv
-	# Install ROCm PyTorch only on electric
-	@if [ "$$(hostname)" = "electric" ]; then \
-		echo "Installing ROCm PyTorch for electric"; \
-		.venv/bin/python -m pip install torch --index-url https://download.pytorch.org/whl/rocm6.4; \
-	fi
-	# Install optional libraries
 	.venv/bin/python -m pip install -e '.[optional-libs]'
 
 venv:

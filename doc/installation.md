@@ -24,11 +24,6 @@ Activate the virtual environment afterwards:
 source .venv/bin/activate
 ```
 
-## Optional: ROCm PyTorch (AMD GPU)
-
-On the machine `electric`, the Makefile automatically installs the ROCm-enabled
-PyTorch build. On other machines, the standard CPU/CUDA build is used.
-
 ## Optional dependencies
 
 To install only the optional tools (linters, notebook stripping, GPU monitoring):
