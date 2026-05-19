@@ -31,6 +31,7 @@ It applies Bayesian optimization with Gaussian Process Regression to accelerate 
 - **Multi-objective optimization** with Pareto frontier analysis
 
 For a full breakdown of the repository structure and file descriptions, see [files.txt](./files.txt).
+Detailed documentation (architecture, design concepts, usage, contributing) is available in [doc/](./doc/).
 
 ## Installation
 
