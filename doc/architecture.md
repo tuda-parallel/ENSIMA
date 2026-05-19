@@ -56,22 +56,25 @@ optimize.py
 
 ## Data flow
 
-### Single-part (MLVGP)
+Both MLVGP and MoE run the same core BO loop. MoE adds a one-time setup phase before
+the loop and routes each iteration to a per-part-type GP instead of a single shared GP.
+
+### Core BO loop (shared by MLVGP and MoE)
 
 ```
 Initial data (x, y)
         │
         ▼
-   Model.fit()              ← GP trained on all observed (x, y)
-        │
+   model.train(x, y)        ← fit GP on all observed data
+        │                      MLVGP: single GP  |  MoE: active expert's GP
         ▼
 AcquisitionFunction         ← scores candidates from SearchSpace (grid or random)
         │
         ▼
-  Best candidate x*         ← selected via selection strategy (EI, HGAL, ...)
+  Best candidate x*         ← selected via EI, HGAL, ...
         │
         ▼
-  Simulation / ObjectiveFunction   ← evaluate x* (real solver or dummy)
+  Simulation / ObjectiveFunction   ← evaluate x*
         │                            FileModifier patches .dat, ProgressWatcher tails log
         ▼
   New (x*, y*) appended
@@ -79,39 +82,39 @@ AcquisitionFunction         ← scores candidates from SearchSpace (grid or rand
         └──────────────────────────► repeat for N iterations / until end condition
 ```
 
-### Multi-part (MoE)
+### MoE setup (runs once before the loop)
+
+Before the BO loop starts, `MoEPointNetSystem` encodes part geometries and creates
+one expert (each wrapping its own GP) per part type or cluster:
 
 ```
 Part geometry files (.t52)
         │
         ▼
-PointNetEncoder             ← encodes each part into a geometry embedding
+PointNetEncoder             ← PointNetClassifier (supervised) or
+        │                     PointNetAutoEncoder + KMeans (unsupervised)
+        ▼
+Expert_A, Expert_B, ...     ← one GP model per part type / cluster
+```
+
+### MoE per-iteration dispatch
+
+At each BO iteration, before calling `model.train()`, gating selects the active expert:
+
+```
+New part geometry (.t52)
         │
         ▼
-Gating (cosine similarity)  ← routes new part to closest expert
+PointNetEncoder             ← embed new geometry
         │
-        ├── Expert_A (trained on part-type A data) ──┐
-        ├── Expert_B (trained on part-type B data) ──┤
-        └── Expert_C (trained on part-type C data) ──┘
-                                                      │
-                                                      ▼
-                                           Active Expert GP
-                                                      │
-                                                      ▼
-                                           AcquisitionFunction
-                                                      │
-                                                      ▼
-                                             Best candidate x*
-                                                      │
-                                                      ▼
-                                           Simulation / ObjectiveFunction
-                                                      │
-                                                      ▼
-                                           New (x*, y*) added to active expert
-                                                      │
-                                           (gating re-evaluated each iteration)
-                                                      │
-                                                      └──► repeat
+        ▼
+Gating                      ← cosine similarity / Euclidean distance to stored embeddings
+        │
+        ├── Expert_A  (active)  → model.train(x_A, y_A)  →  AcquisitionFunction  →  x*
+        ├── Expert_B
+        └── Expert_C
+                                   New (x*, y*) added to active expert's dataset
+                                   (gating re-evaluated each iteration)
 ```
 
 ## MoE PointNet modes
