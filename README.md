@@ -60,6 +60,71 @@ After installation, activate the virtual environment with:
 source .venv/bin/activate
 ```
 
+## Adapting to Your Environment
+
+Running `ensima` against real simulations requires pointing it at your local installations of OpenForm and OFSolve and at a valid RLM license server. There are two patterns for doing this, both illustrated by examples in [examples/](./examples/).
+
+> **Note:** Without `--openform` and `--ofsolver`, `ensima` falls back to the built-in dummy objective function, which is sufficient for testing the optimization loop but does not run any real simulation.
+
+### Pattern 1 — explicit paths in the script
+
+[`examples/example_filtered_optimization_cluster.py`](./examples/example_filtered_optimization_cluster.py) passes every path directly to `parse_arguments()`:
+
+```python
+args = parse_arguments([
+    "-ofs", "/rwthfs/rz/cluster/home/.../OFSolv_1.0.4e_eng_linux64.exe",
+    "-ofm", "/rwthfs/rz/cluster/home/.../OpenForm_64_batch",
+    "-p",   "/rwthfs/rz/cluster/home/.../TCO-Benchmark/PartType_04",
+    "-o",   "/rwthfs/rz/cluster/home/.../test/csv/DataSets-AIandML_labeled.csv",
+    "--license_server",         "license.itc.rwth-aachen.de",
+    "--license_port",           "50141",
+    "--license_type",           "RLM",
+    "--license_server_service",
+    ...
+])
+```
+
+Replace every path and the license server address with the values that apply to your machine or cluster.
+
+### Pattern 2 — automatic hostname-based rewriting
+
+[`examples/example_moe_optimization.py`](./examples/example_moe_optimization.py) starts with local paths and then calls the cluster helper at the end:
+
+```python
+args = parse_arguments([
+    "-ofs", "/d/gitlab/ensima-code/OpenForm-Solver/.../OFSolv_1.0.4e_eng_linux64.exe",
+    "-ofm", "/d/gitlab/ensima-code/test_data/.../OpenForm_64_batch",
+    "-p",   "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02",
+    ...
+])
+
+parts = [("ASaeule", "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/.../ASaeule.t52"), ...]
+
+# rewrites paths and license settings when not running on the local machine
+args, parts = adjust_args_and_parts_for_cluster(args, parts)
+
+main(args, parts=parts)
+```
+
+`adjust_args_and_parts_for_cluster` (in `ensima/helpers/adjust_args_cluster.py`) inspects the machine's hostname and replaces the local paths with cluster-specific ones automatically. The following items in that file must be adapted for a new environment:
+
+| What | Location | Description |
+|---|---|---|
+| `local_hostname` | `adjust_args_cluster.py:19` | Substring of the local machine's hostname; paths are **not** rewritten when this string is found in the hostname |
+| `--ofsolver` path | `adjust_args_for_aachen_cluster()` / `adjust_args_for_gpu_server()` | Absolute path to the `OFSolv_*.exe` binary on the target machine |
+| `--openform` path | same functions | Absolute path to the `OpenForm_64_batch` executable |
+| Job directory (`-p`) and output (`-o`) paths | same functions | `str.replace()` pairs mapping local roots to cluster roots |
+| `--license_server`, `--license_port`, `--license_type` | same functions | RLM license server address and port for the target site |
+| `rlm` executable path | `adjust_args_for_gpu_server()` | Path to the `rlm` binary, needed when `license_server_service` is `False` |
+| TCO-Benchmark data root | `adjust_parts_for_cluster()` | `old` / `new` path pair rewriting part `.t52` file paths for the cluster |
+
+### Adding a new cluster environment
+
+1. Add a new `adjust_args_for_<name>(args)` function in `ensima/helpers/adjust_args_cluster.py` following the pattern of `adjust_args_for_aachen_cluster` or `adjust_args_for_gpu_server`.
+2. Register it in `adjust_args_for_cluster()` and `adjust_args_and_parts_for_cluster()` by matching a hostname substring.
+
+<p align="right"><a href="#ensima">⬆</a></p>
+
 ## Usage
 
 Once installed, you can use the command-line tool:
