@@ -11,11 +11,17 @@ For more information, see the LICENSE file in the project root:
 https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 """
 
+from pathlib import Path
+
 from ensima.helpers.adjust_args_cluster import (
     adjust_args_and_parts_for_cluster,
 )
 from ensima.helpers.parse_args import parse_arguments
 from ensima.optimize import main
+
+REPO_ROOT = Path(__file__).parent.parent
+JIMS_TCO = f"{REPO_ROOT}/artifacts/JIMS/TCO-Benchmark"
+TEST_CSV = f"{REPO_ROOT}/test/csv"
 
 # INFO: In contrast to `example_optimization.py`, the moe mode needs:
 # 1) the geometry of the new part (passed in args with `-g`)
@@ -30,11 +36,11 @@ if __name__ == "__main__":
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             #
             "-p",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
-            # "/d/gitlab/ensima-code/test_data/ensima-deata-main/OpenForm/TCO-Benchmark/PartType_04",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03",
+            # f"{JIMS_TCO}/PartType_01_Flat",
+            # f"{JIMS_TCO}/PartType_04",
+            # f"{JIMS_TCO}/new_parts/PartType_01",
+            f"{JIMS_TCO}/new_parts/PartType_02",
+            # f"{JIMS_TCO}/new_parts/PartType_03",
             #
             "-j",
             # "ASaeule",
@@ -54,14 +60,14 @@ if __name__ == "__main__":
             "48",
             "-e",
             "-o",
-            "/d/github/ENSIMA/test/csv/DataSets-AIandML_labeled.csv",
+            f"{TEST_CSV}/DataSets-AIandML_labeled.csv",
             #
             "-g",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat/Aseule.t52",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04/Einleger.t52",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02/Laengstraeger_02.t52",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03/SeatShell.t52",
+            # f"{JIMS_TCO}/PartType_01_Flat/Aseule.t52",
+            # f"{JIMS_TCO}/PartType_04/Einleger.t52",
+            # f"{JIMS_TCO}/new_parts/PartType_01/DACH-VWS.t52",
+            f"{JIMS_TCO}/new_parts/PartType_02/Laengstraeger_02.t52",
+            # f"{JIMS_TCO}/new_parts/PartType_03/SeatShell.t52",
             #
             "-l",
             "DEBUG",
@@ -151,51 +157,51 @@ if __name__ == "__main__":
     parts = [
         (
             "ASaeule",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat/ASaeule.t52",
+            f"{JIMS_TCO}/PartType_01_Flat/ASaeule.t52",
         ),
         (
             "BSaeule",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_02_Beam/BSaeule_DX56D.t52",
+            f"{JIMS_TCO}/PartType_02_Beam/BSaeule_DX56D.t52",
         ),
         (
             "RadhausAdapter",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_03_Deep/RadhausAdapter.t52",
+            f"{JIMS_TCO}/PartType_03_Deep/RadhausAdapter.t52",
         ),
         # (
         #     "Einleger",
-        #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04/Einleger.t52",
+        #     f"{JIMS_TCO}/PartType_04/Einleger.t52",
         # ),
         # (
         #     "ASaeule_BSym",
-        #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/A-Pilar.t52",
+        #     f"{JIMS_TCO}/T52-PartFiles/A-Pilar.t52",
         # ),
         (
             "Quertraeger",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/CrossBeam.t52",
+            f"{JIMS_TCO}/T52-PartFiles/CrossBeam.t52",
         ),
         (
             "FrontFender_01",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/FrontFender_A.t52",
+            f"{JIMS_TCO}/T52-PartFiles/FrontFender_A.t52",
         ),
         (
             "Kotfluegel-DC",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/FrontFender_B.t52",
+            f"{JIMS_TCO}/T52-PartFiles/FrontFender_B.t52",
         ),
         (
             "Heckklappe_aussen",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/TailGate.t52",
+            f"{JIMS_TCO}/T52-PartFiles/TailGate.t52",
         ),
         (
             "Tankdeckeleinsatz",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/TankCapInsert.t52",
+            f"{JIMS_TCO}/T52-PartFiles/TankCapInsert.t52",
         ),
         (
             "Tunnel_Passat",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/Tunnel.t52",
+            f"{JIMS_TCO}/T52-PartFiles/Tunnel.t52",
         ),
         # (
         #     "SeatShell",
-        #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03/SeatShell.t52",
+        #     f"{JIMS_TCO}/new_parts/PartType_03/SeatShell.t52",
         # ),
     ]
 

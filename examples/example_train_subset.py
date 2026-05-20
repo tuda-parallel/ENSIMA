@@ -11,7 +11,7 @@ For more information, see the LICENSE file in the project root:
 https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 """
 
-import os
+from pathlib import Path
 
 import numpy as np
 
@@ -21,9 +21,9 @@ from ensima.helpers.adjust_args_cluster import adjust_args_for_cluster
 from ensima.helpers.parse_args import parse_arguments
 from ensima.helpers.read_data import read_data
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-csv_file = "/d/github/ENSIMA/test/csv/DataSets-AIandML_20250401.csv"
-path = "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_02_Beam"
+REPO_ROOT = Path(__file__).parent.parent
+csv_file = f"{REPO_ROOT}/test/csv/DataSets-AIandML_20250401.csv"
+path = f"{REPO_ROOT}/artifacts/JIMS/TCO-Benchmark/PartType_02_Beam"
 # Start license server as a service (../test_data/gns)
 args = parse_arguments(
     [

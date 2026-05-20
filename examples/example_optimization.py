@@ -11,9 +11,15 @@ For more information, see the LICENSE file in the project root:
 https://github.com/tuda-parallel/ENSIMA/blob/main/LICENSE
 """
 
+from pathlib import Path
+
 from ensima.helpers.adjust_args_cluster import adjust_args_for_cluster
 from ensima.helpers.parse_args import parse_arguments
 from ensima.optimize import main
+
+REPO_ROOT = Path(__file__).parent.parent
+JIMS_TCO = f"{REPO_ROOT}/artifacts/JIMS/TCO-Benchmark"
+TEST_CSV = f"{REPO_ROOT}/test/csv"
 
 # use filtered or MOE
 if __name__ == "__main__":
@@ -24,11 +30,11 @@ if __name__ == "__main__":
             "-ofm",
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             "-p",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03",
+            # f"{JIMS_TCO}/PartType_04",
+            # f"{JIMS_TCO}/PartType_01_Flat",
+            f"{JIMS_TCO}/new_parts/PartType_01",
+            # f"{JIMS_TCO}/new_parts/PartType_02",
+            # f"{JIMS_TCO}/new_parts/PartType_03",
             "-j",
             # "Einleger",
             # "ASaeule",
@@ -45,8 +51,8 @@ if __name__ == "__main__":
             "48",
             "-e",
             "-o",
-            # "/d/github/ENSIMA/test/csv/DataSets-AIandML.csv",
-            "/d/github/ENSIMA/test/csv/DataSets-AIandML.csv",
+            # f"{TEST_CSV}/DataSets-AIandML.csv",
+            f"{TEST_CSV}/DataSets-AIandML.csv",
             "-l",
             "DEBUG",
             "-pl",
@@ -153,11 +159,11 @@ if __name__ == "__main__":
     # 2)filter by type
     # since the CSV is unlabeled, we filter by type.
     # Use ensima/helpers/complexity.py to find the type number.
-    # args.output = "/d/github/ENSIMA/test/csv/DataSets-AIandML.csv"
+    # args.output = f"{TEST_CSV}/DataSets-AIandML.csv"
     # args = adjust_args_for_cluster(args)
     # main(args, True, type_number=1)
 
     # 3) filter by part
-    args.output = "/d/github/ENSIMA/test/csv/DataSets-AIandML_labeled.csv"
+    args.output = f"{TEST_CSV}/DataSets-AIandML_labeled.csv"
     args = adjust_args_for_cluster(args)
     main(args, True)

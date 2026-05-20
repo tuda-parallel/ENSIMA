@@ -21,14 +21,14 @@ if __name__ == "__main__":
         [
             "-ofs",
             # makes errors
-            "/rwthfs/rz/cluster/home/cg021604/gns/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
+            "~/gns/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
             # better, but does not produce the files needed
-            # "/home/rwth1453/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
+            # "~/OFSolv_V2.16.0-E/bin/OFSolv_1.0.4e_eng_linux64.exe",
             "-ofm",
-            "/rwthfs/rz/cluster/home/cg021604/gns/OpenForm_daily_linux64/OpenForm_64_batch",
+            "~/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             "-p",
-            # "/rwthfs/rz/cluster/home/qfw89470/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat",
-            "/rwthfs/rz/cluster/home/qfw89470/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_04",
+            # "~/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_01_Flat",
+            "~/ensima-code/test_data/ensima-data-main/OpenForm/TCO-Benchmark/PartType_04",
             "-j",
             # "ASaeule",
             "Einleger",
@@ -39,7 +39,7 @@ if __name__ == "__main__":
             "32",
             "-e",
             "-o",
-            "/rwthfs/rz/cluster/home/cg021604/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv",
+            "~/ensima-code/optimization/test/csv/DataSets-AIandML_labeled.csv",
             "-l",
             "DEBUG",
             # "INFO",

@@ -239,7 +239,7 @@ Distributed under the BSD 3-Clause License. See [LICENSE](./LICENSE) for more in
 ## Acknowledgments
 
 The optimization loop in `ensima` is developed and maintained by the [Parallel Programming](https://www.parallel.informatik.tu-darmstadt.de/) group at TU Darmstadt.
-The main author of this project is Ahmad Tarraf.
+The main author of the optimization loop is Ahmad Tarraf.
 
 This software is part of the [ENSIMA project](https://www.vi-hps.org/projects/ensima/overview/overview.html), funded by the German Federal Ministry of Research, Technology, and Space (BMBF), grant period 2022–2025. The project aims to accelerate design parameter optimization in sheet metal forming through AI-based methods, approximate computing, and heterogeneous hardware.
 
