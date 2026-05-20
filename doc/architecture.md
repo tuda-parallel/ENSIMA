@@ -56,17 +56,28 @@ optimize.py
 
 ## Data flow
 
-Both MLVGP and MoE run the same core BO loop. MoE adds a one-time setup phase before
-the loop and routes each iteration to a per-part-type GP instead of a single shared GP.
+Both the standard GP model and MoE share the same entry point and optimization loop.
+The only difference at the call site is passing `parts` to `BayesianOptimization`:
 
-### Core BO loop (shared by MLVGP and MoE)
+```python
+# Standard GP
+BayesianOptimization(args, x, y)                    → self.model = Model(...)
+
+# MoE
+BayesianOptimization(args, x, y, parts=[...])       → self.model = MoEPointNetSystem(...)
+```
+
+The `optimize()` loop is identical in both cases. MoE-specific behavior is encapsulated
+inside `MoEPointNetSystem.predict()` and `MoEPointNetSystem.train()`.
+
+### Core BO loop (shared by both model types)
 
 ```
 Initial data (x, y)
         │
         ▼
-   model.train(x, y)        ← fit GP on all observed data
-        │                      MLVGP: single GP  |  MoE: active expert's GP
+   model.train(x, y)        ← fit GP on observed data
+        │                      standard: single GP  |  MoE: recently-used expert(s) only
         ▼
 AcquisitionFunction         ← scores candidates from SearchSpace (grid or random)
         │
@@ -84,37 +95,89 @@ AcquisitionFunction         ← scores candidates from SearchSpace (grid or rand
 
 ### MoE setup (runs once before the loop)
 
-Before the BO loop starts, `MoEPointNetSystem` encodes part geometries and creates
-one expert (each wrapping its own GP) per part type or cluster:
+Before the BO loop starts, `MoEPointNetSystem` encodes the geometry of all *known* part
+types and creates one expert (each wrapping its own GP) per part type or cluster.
+The new part being optimized is **not** in the expert pool at this stage:
 
 ```
-Part geometry files (.t52)
+Known part geometry files (.t52)
         │
         ▼
 PointNetEncoder             ← PointNetClassifier (supervised) or
         │                     PointNetAutoEncoder + KMeans (unsupervised)
         ▼
-Expert_A, Expert_B, ...     ← one GP model per part type / cluster
+Expert_A, Expert_B, ...     ← one GP per known part type / cluster
+                               (new part has no expert yet)
 ```
 
-### MoE per-iteration dispatch
+### MoE per-iteration flow — bootstrap phase
 
-At each BO iteration, before calling `model.train()`, gating selects the active expert:
+During the first `new_expert_start` iterations the new part has no dedicated expert.
+Prediction delegates to the closest known expert; that expert is then retrained with
+the single new data point appended to its own dataset:
 
 ```
 New part geometry (.t52)
         │
         ▼
-PointNetEncoder             ← embed new geometry
+PointNetEncoder             ← embed new part geometry
         │
         ▼
-Gating                      ← cosine similarity / Euclidean distance to stored embeddings
+Gating                      ← cosine similarity / Euclidean distance
+        │                      to stored known-part embeddings
+        ▼
+Closest Expert_K            ← predict(x*)   [recent_used_experts recorded]
         │
-        ├── Expert_A  (active)  → model.train(x_A, y_A)  →  AcquisitionFunction  →  x*
-        ├── Expert_B
-        └── Expert_C
-                                   New (x*, y*) added to active expert's dataset
-                                   (gating re-evaluated each iteration)
+        ▼
+Simulation → new (x*, y*)
+        │
+        ▼
+train_expert()              ← appends (x*, y*) to Expert_K's dataset
+                               and retrains Expert_K only
+                               (counter incremented each call)
+```
+
+### MoE graduation (once, when counter reaches new_expert_start)
+
+When `train_expert()` is called for the `new_expert_start`-th time and the new part
+still has no dedicated expert, the system creates a standalone expert for it and
+discards the old expert pool entirely:
+
+```
+train_expert() detects: expert(new_part) is None  AND  counter >= new_expert_start
+        │
+        ▼
+Delete all old experts, geo_points, train_points
+        │
+        ▼
+Load new part geometry from geometry_path
+        │
+        ▼
+PointNetClassifier retrained (1 class: new part only)
+        │
+        ▼
+New Expert created using the last new_expert_start collected data points
+        │
+        ├── reset_points = True  → BO shrinks self.x / self.y to new expert's data only
+        │
+        └── mode = "supervised", hard gating  → single expert from now on
+```
+
+After graduation `train_expert()` enters its normal branch: it trains the new part's
+expert (now in `experts`) with every subsequent data point.
+
+### MoE fallback mode
+
+If the new part already appears in the labeled training CSV with more than
+`new_expert_start` rows, `MoEPointNetSystem.__init__` detects this and skips the
+bootstrap phase entirely:
+
+```
+__init__ detects: self.name in geo_points  AND  len(x) > new_expert_start
+        │
+        ▼
+mode = "fallback"  → single Expert for new part, no PointNet / gating
+                      BO runs as a standard single-GP optimization
 ```
 
 ## MoE PointNet modes
@@ -151,14 +214,15 @@ are defined by **KMeans clustering** over the learned embeddings.
 
 ### Shared gating logic
 
-Both modes call `get_best_expert(new_embedding, soft=...)`, which:
+Both modes call `assign_to_expert(new_embedding, soft=...)`, which:
 
 1. Encodes the new geometry into an embedding.
 2. Scores it against all stored expert embeddings using the chosen metric.
 3. Returns the best-matching expert (hard) or a weighted combination (soft, supervised only).
 
-Gating is re-evaluated at every iteration, so a new part shape can be rerouted if embeddings
-shift after continued training.
+During the bootstrap phase, gating is re-evaluated at every iteration using the stored
+known-part embeddings. After graduation only the new part's own expert exists, so gating
+is effectively a no-op (single expert, hard assignment).
 
 ## Backends
 
