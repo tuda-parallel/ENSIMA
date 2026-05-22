@@ -1,5 +1,3 @@
-Organizing and Using Simulation Results
-
 ## Overview
 This guide explains:
 - How simulation results are stored

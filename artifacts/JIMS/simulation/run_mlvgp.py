@@ -88,7 +88,7 @@ if __name__ == "__main__":
             "--approximate_computing_check",
             "90",
             "--approximate_computing_limit",
-            "15",  # L1 <= 5%
+            "15",  # L1 <= 15%
             "100",  # skips L2
             "100",  # skips L3
             "100",  # L4 >= 90%
@@ -99,6 +99,8 @@ if __name__ == "__main__":
             "grid",
             "--x_space_point_creation",
             "combination",
+            "--sample_mode",
+            "downsample",
             "--latent_input_dim",
             "6",
             "--epochs",

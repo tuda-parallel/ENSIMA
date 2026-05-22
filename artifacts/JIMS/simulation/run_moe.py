@@ -120,17 +120,20 @@ if __name__ == "__main__":
             "100",  # skips L3
             "100",  # L4 >= 90%
             "100",  # skips L5
-            "0.1",  # L6 <= 0.1%
-            "0.01",  # L7 <= 0.01%
+            "1.0",  # L6  (Laengstraeger)
+            # "0.1",   # L6  # <<< DACH-VWS
+            "1.0",  # L7  (Laengstraeger)
+            # "0.01",  # L7  # <<< DACH-VWS
             #
             # --- Search space ---
             "--x_space_structure",
             "grid",
             "--x_space_point_creation",
-            "combination",
+            "combination",  # Laengstraeger
+            # "linear",     # <<< DACH-VWS
             "--x_space_precision",
-            "2",  # Laengstraeger (paper: 2; verified in JSON)
-            # "1",  # <<< DACH-VWS (paper: 2; actual run used 1)
+            "2",  # Laengstraeger
+            # "1",  # <<< DACH-VWS
             "--sample_mode",
             "upsample",
             #
@@ -147,8 +150,10 @@ if __name__ == "__main__":
             "50",  # L3
             "100",  # L4
             "50",  # L5
-            "0",  # L6
-            "0",  # L7
+            "0.5",  # L6  (Laengstraeger)
+            # "0.0",  # L6  # <<< DACH-VWS
+            "0.5",  # L7  (Laengstraeger)
+            # "0.0",  # L7  # <<< DACH-VWS
             "--watcher_backend",
             "logger",
         ]
@@ -170,20 +175,12 @@ if __name__ == "__main__":
             "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_03_Deep/RadhausAdapter.t52",
         ),
         (
-            "Einleger",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04/Einleger.t52",
-        ),
-        (
             "Quertraeger",
             "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/CrossBeam.t52",
         ),
         (
             "FrontFender_01",
             "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/FrontFender_A.t52",
-        ),
-        (
-            "Kotfluegel-DC",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/FrontFender_B.t52",
         ),
         (
             "Heckklappe_aussen",
@@ -193,10 +190,10 @@ if __name__ == "__main__":
             "Tankdeckeleinsatz",
             "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/TankCapInsert.t52",
         ),
-        # (
-        #     "Tunnel_Passat",
-        #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/Tunnel.t52",
-        # ),
+        (
+            "Tunnel_Passat",
+            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/Tunnel.t52",
+        ),
     ]
 
     # Parameter constraints
