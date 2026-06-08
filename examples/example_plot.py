@@ -18,7 +18,7 @@ from ensima.helpers.parse_args import parse_arguments
 from ensima.optimize import main
 
 REPO_ROOT = Path(__file__).parent.parent
-JIMS_TCO = f"{REPO_ROOT}/artifacts/JIMS/TCO-Benchmark"
+paper_TCO = f"{REPO_ROOT}/artifacts/paper/TCO-Benchmark"
 TEST_CSV = f"{REPO_ROOT}/test/csv"
 
 # use filtered or MOE
@@ -30,11 +30,11 @@ if __name__ == "__main__":
             "-ofm",
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             "-p",
-            # f"{JIMS_TCO}/PartType_04",
-            f"{JIMS_TCO}/PartType_01_Flat",
-            # f"{JIMS_TCO}/new_parts/PartType_01",
-            # f"{JIMS_TCO}/new_parts/PartType_02",
-            # f"{JIMS_TCO}/new_parts/PartType_03",
+            # f"{paper_TCO}/PartType_04",
+            f"{paper_TCO}/PartType_01_Flat",
+            # f"{paper_TCO}/new_parts/PartType_01",
+            # f"{paper_TCO}/new_parts/PartType_02",
+            # f"{paper_TCO}/new_parts/PartType_03",
             "-j",
             # "Einleger",
             "ASaeule",

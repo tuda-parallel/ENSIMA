@@ -23,7 +23,7 @@ from ensima.helpers.read_data import read_data
 
 REPO_ROOT = Path(__file__).parent.parent
 csv_file = f"{REPO_ROOT}/test/csv/DataSets-AIandML_20250401.csv"
-path = f"{REPO_ROOT}/artifacts/JIMS/TCO-Benchmark/PartType_02_Beam"
+path = f"{REPO_ROOT}/artifacts/paper/TCO-Benchmark/PartType_02_Beam"
 # Start license server as a service (../test_data/gns)
 args = parse_arguments(
     [

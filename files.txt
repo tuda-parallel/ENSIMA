@@ -4,7 +4,7 @@ ENSIMA Repository — File Overview
 Top-level layout:
 
   Directories:
-  artifacts/      Simulation artifacts and benchmark data (JIMS experiments)
+  artifacts/      Simulation artifacts and benchmark data (paper experiments)
   ensima/         Python package (source code)
   examples/       Example scripts demonstrating usage
   test/           Test suite and CSV datasets
@@ -22,7 +22,7 @@ Top-level layout:
 
 
 ================================================================================
-artifacts/JIMS/
+artifacts/paper/
 ================================================================================
 
 ├── CSV/                         Aggregated CSV datasets used for training and optimization
@@ -30,7 +30,7 @@ artifacts/JIMS/
 │   ├── DataSets-AIandML_labeled.csv Labeled dataset (part-level labels for filtering)
 │   └── DataSets-AIandML_expert.csv  Expert-guided subset
 │
-├── sim_results/                 Simulation run results from JIMS experiments
+├── sim_results/                 Simulation run results from paper experiments
 │   │                            Each sub-folder contains per-run directories with:
 │   │                            logs, intermediate results, summary, and JSON output.
 │   │                            Aggregated results per experiment are in a single JSON file.
@@ -75,7 +75,7 @@ artifacts/JIMS/
 TCO-Benchmark — Full Tree
 ================================================================================
 
-artifacts/JIMS/TCO-Benchmark/
+artifacts/paper/TCO-Benchmark/
 ├── new_parts
 │   ├── PartType_01
 │   │   ├── DACH-VWS.dat
@@ -234,7 +234,7 @@ tools/
 ================================================================================
 
 tools/
-├── plot_results.ipynb           Jupyter notebook for plotting JIMS experiment results
+├── plot_results.ipynb           Jupyter notebook for plotting paper experiment results
 ├── plot_results.py              Standalone script version of the plotting notebook
 ├── Import-CSV.c                 C utility for importing CSV results into OpenForm
 ├── original_Import-CSV.c        Original version of the CSV importer

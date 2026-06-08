@@ -161,7 +161,7 @@ def test_read_csv():
     assert True
 
 
-def test_execute_block_and_log():
+def test_execute_block_and_log(cleanup_log):
     """
     Test the execution of a block and logging the output.
     """
@@ -171,23 +171,13 @@ def test_execute_block_and_log():
     execute_block_and_log("ls -lahrt", "./log.out", True, "./", None)
 
 
-def test_read_dat():
-    # f = FileModifier(
-    #     "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark"
-    #     "/PartType_02_Beam/BSaeule_DX56D.dat"
-    # )
+def test_read_dat(restore_artifacts):
     f = FileModifier(
-        "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_02_Beam/BSaeule_DX56D.dat"
+        "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_02_Beam/BSaeule_DX56D.dat"
     )
     f.set_design_parameters({"Fr": 0.01})
     f.set_design_parameters({"p": 0.1})
     f.set_blank_thickness(0.1)
-    f.print()
-
-    # restore
-    f.set_design_parameters({"Fr": 0.03})
-    f.set_design_parameters({"p": 0.5})
-    f.set_blank_thickness(0.7)
     f.print()
 
 
@@ -196,7 +186,7 @@ def test_ensima_optimization_init():
     Test the ENSIMA optimization process.
     """
     try:
-        path = "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark" "/PartType_02_Beam"
+        path = "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark" "/PartType_02_Beam"
         job = "BSaeule_DX56D"
         csv_file = "Somecsvfile.csv"
         session = "BSaeule_DX56D-Session_01.ofs"
@@ -216,7 +206,7 @@ def test_ensima_train():
     try:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         csv_file = os.path.join(script_dir, "csv/DataSets-AIandML.csv")
-        path = "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark" "/PartType_02_Beam"
+        path = "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark" "/PartType_02_Beam"
         # Start license server as a service (../test_data/gns)
         ofsolver = (
             "/d/gitlab/ensima-code/OpenForm-Solver/OFSolv_V2.16.0-E/bin/OFSolv_1"
@@ -265,7 +255,7 @@ def test_ensima_optimization():
     try:
 
         csv_file = "/d/github/ENSIMA/test/csv/DataSets-AIandML_20250401.csv"
-        path = "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat"
+        path = "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_01_Flat"
         # Start license server as a service (../test_data/gns)
         args = parse_arguments(
             [

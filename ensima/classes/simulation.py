@@ -21,6 +21,7 @@ from argparse import Namespace
 
 import numpy as np
 
+from ensima.classes.base_simulation import BaseSimulation
 from ensima.classes.execute import (
     execute_block,
     monitor_and_create_signal,
@@ -36,7 +37,7 @@ from ensima.helpers.read_data import read_data
 from ensima.helpers.units import convert_seconds_to_hms
 
 
-class Simulation:
+class Simulation(BaseSimulation):
     """
     A class to run simulation workflows using OFsolve and OpenForm,
     managing session files, input parameters, and result parsing.

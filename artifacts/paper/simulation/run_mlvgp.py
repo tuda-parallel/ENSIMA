@@ -1,5 +1,5 @@
 """
-Script used to produce the MLVGP simulation results in artifacts/JIMS/sim_results/MLVGP/.
+Script used to produce the MLVGP simulation results in artifacts/paper/sim_results/MLVGP/.
 
 Runs single-part Bayesian optimization (MLVGP) on SeatShell, filtering the labeled
 CSV to the target part. Executed on a GPU cluster — set -ofs and -ofm to your local
@@ -27,11 +27,11 @@ if __name__ == "__main__":
             "-ofm",
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             "-p",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_04",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_01_Flat",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_01",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_02",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_03",
             "-j",
             # "Einleger",
             # "ASaeule",

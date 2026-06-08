@@ -207,7 +207,7 @@ if __name__ == "__main__":
     args = parse_arguments(
         [
             "--path",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_01_Flat",
             "-l",
             "DEBUG",
             "-j",

@@ -78,7 +78,7 @@ SeatShell, filtering the labeled CSV to the target part.
 Results are in `sim_results/MLVGP/`.
 
 ```sh
-python artifacts/JIMS/simulation/run_mlvgp.py
+python artifacts/paper/simulation/run_mlvgp.py
 ```
 
 ### Running MoE
@@ -89,7 +89,7 @@ Laengstraeger_02 as the new target part. The `parts` list defines the expert lib
 switch to a different target part. Results are in `sim_results/MOE/`.
 
 ```sh
-python artifacts/JIMS/simulation/run_moe.py
+python artifacts/paper/simulation/run_moe.py
 ```
 
 ### Running the no-optimization baseline
@@ -100,7 +100,7 @@ user-defined parameter sequences — no BO loop. Switch `mode` between `"expert"
 Results are in `sim_results/no_optimization/`.
 
 ```sh
-python artifacts/JIMS/simulation/run_no_optimization.py
+python artifacts/paper/simulation/run_no_optimization.py
 ```
 
 ---
@@ -108,7 +108,7 @@ python artifacts/JIMS/simulation/run_no_optimization.py
 ## 5. Structure
 
 ```
-artifacts/JIMS/
+artifacts/paper/
 ├── CSV/                  CSV results (labeled, unlabeled, expert)
 ├── TCO-Benchmark/        Simulation input files (geometry, session, dat files)
 ├── simulation/           Scripts used to produce sim_results (exact configurations)

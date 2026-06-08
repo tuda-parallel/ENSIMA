@@ -29,6 +29,8 @@ def main(
     type_filter: bool = True,
     parts: list[tuple[str, str]] = None,
     type_number: int = None,
+    simulation_class=None,
+    file_modifier_class=None,
 ) -> None:
     """main function for optimization. sets up initial data and executes bayesian optimization"""
     # Set default arguments when no args are passed
@@ -112,6 +114,8 @@ def main(
             type_filter=type_filter,  # to indicate the name on the **labeled** CSV file
             types=types,
             parts=parts,  # if parts is not None MOE is used
+            simulation_class=simulation_class,
+            file_modifier_class=file_modifier_class,
         )
         # logger.debug(repr(bayes_opt))
         if args.iterations > 0:

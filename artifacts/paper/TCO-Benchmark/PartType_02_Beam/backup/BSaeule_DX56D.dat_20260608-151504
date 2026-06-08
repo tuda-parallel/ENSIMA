@@ -1,0 +1,251 @@
+$-----------------------------
+$ Part Name: BSaeule
+$ 
+$ Design 1: Blank Thickness      [D] = 0.70/0.80/0.90/1.00      [mm]
+$ Design 2: Blankholder Pressure [p] = 0.50/1.00/2.00           [N/mm*2]
+$ Design 5: Yield Strength       [Rp]= 140 /152 /153 /263 / 365 [N/mm*2]
+$-----------------------------
+TITEL
+BSaeule:  VW - 2011 [153.000, 0.100, 0.100, 0.030, 0.000]
+Platine:  Zuschnitt LxB = 1190x 590 mm*2, [D] = 0.70mm (in .t51 file!)
+Material: DX56D   (210000,0.3, 153.0,23.0,322.0, 1.73,1.49,2.37)
+------------------------------
+ART DER BERECHNUNG
+ANALYSE
+$CHECK
+NEUSTART
+MIT KONTAKT
+OHNE PROJEZIERTE LINIEN
+------------------------------
+MATERIALBIBLIOTHEK,1,
+$ [Rp] = 153.0
+1,DX56D_080,
+------------------------------
+POSTDATEN,2,
+SKALAR,2,
+DDICK
+HAUEPS,S3,
+XYPLOT,1,
+ALLE,
+------------------------------
+RESTARTDATEN,0,
+------------------------------------------------------------
+------------------------------------------------------------
+$-----------------------------
+$ Type: Gravity
+$-----------------------------
+BLOCKNAME OP20 - Dropping Blank on Die,1000,
+------------------------------
+GLEICHUNGSLOESER
+CHOLESKY
+KOMPAKT,1,
+KONDITIONSZAHL
+OHNE ITERATIVES VERFAHREN
+------------------------------
+STEUERUNG
+1,200,,0,
+KRAFT
+RELATIV
+0.05,
+NEWTON
+MIT LINE-SEARCH
+3,6,
+------------------------------
+KONTAKT
+KONTROLLE,1,
+2,50,,,,,5,
+LOESEN,1,
+0.1,
+FESSELN,1,
+0.1,,,0,
+------------------------------
+WERKZEUGSTEUERUNG
+ENTLASTUNG/POSITIONIERUNG,0,
+INITIALBEWEGUNG,1,
+Die
+0,0,1,-1,
+GESCHWINDIGKEITEN/LASTEN,0.05,1,
+Die
+0,0,0,0,0,
+------------------------------
+ZEITSCHRITT,0.01,1,0,,
+0.001,0.01,1,1.5,,,,,10,
+------------------------------
+DAEMPFUNG,1
+Blank
+D,D,D,
+0.001,0.001,1E-06,
+------------------------------
+VOLUMENLAST,1,2,,
+Blank
+*,*,V,
+,,7.69822E-05,
+------------------------------
+POSTINKREMENT,,,,,0.2,1,
+------------------------------------------------------------
+------------------------------------------------------------
+$-----------------------------
+$ Type: Closing
+$-----------------------------
+BLOCKNAME OP20 - Closing Binder 0.5[N/mm*2],1000,
+------------------------------
+GLEICHUNGSLOESER
+CHOLESKY
+KOMPAKT,1,
+KONDITIONSZAHL
+OHNE ITERATIVES VERFAHREN
+------------------------------
+STEUERUNG
+1,200,,0,
+KRAFT
+RELATIV
+0.05,
+NEWTON
+MIT LINE-SEARCH
+3,6,
+------------------------------
+WERKZEUGSTEUERUNG
+ENTLASTUNG/POSITIONIERUNG,0,
+INITIALBEWEGUNG,1,
+Binder
+0,0,1,0,
+GESCHWINDIGKEITEN/LASTEN,0.05,2,
+Binder
+$ [p]=  0.1
+14,0,0, 0.1,0,
+Die
+0,0,0,0,0,
+------------------------------
+ZEITSCHRITT,0.1,1,0,,
+0.01,0.5,1E+06,1.5,,,,,10,
+------------------------------
+DAEMPFUNG,0,
+------------------------------
+VOLUMENLAST,-1,
+------------------------------
+REZONING,2,1,
+Blank
+1,,3.,
+Blank
+4,,3.,
+------------------------------
+POSTINKREMENT,,,,,10.,1,
+------------------------------------------------------------
+------------------------------------------------------------
+$-----------------------------
+$ Type: Forming
+$-----------------------------
+BLOCKNAME OP20 - Closing Punch  100[mm],1000,
+------------------------------
+GLEICHUNGSLOESER
+CHOLESKY
+KOMPAKT,1,
+KONDITIONSZAHL
+OHNE ITERATIVES VERFAHREN
+------------------------------
+STEUERUNG
+1,200,,0,
+KRAFT
+RELATIV
+0.05,
+NEWTON
+MIT LINE-SEARCH
+3,6,
+------------------------------
+WERKZEUGSTEUERUNG
+ENTLASTUNG/POSITIONIERUNG,1,
+Punch
+0,0,-100,
+INITIALBEWEGUNG,2,
+Binder
+0,0,1,0,
+Punch
+0,0,1,0,
+GESCHWINDIGKEITEN/LASTEN,0.05,3,
+Binder
+11,0,0,0,0,
+Die
+0,0,0,0,0,
+Punch
+0,0,0,1,0,
+------------------------------
+ZEITSCHRITT,0.1,1,0,1,
+0.01,0.5,100,1.5,,,,,10,
+------------------------------
+REIBUNG,3,1,,
+Binder
+$ [Fr] = 0.03
+0.03,0.1,0,
+Die
+$ [Fr] = 0.03
+0.03,0.1,0,
+Punch
+$ [Fr] = 0.03
+0.03,0.1,0,
+------------------------------
+DAEMPFUNG,-1
+------------------------------
+VOLUMENLAST,-1,0,,
+------------------------------
+REZONING,2,1,
+Blank
+1,,3.,
+Blank
+4,,3.,
+------------------------------
+POSTINKREMENT,,,,,10.,1,
+------------------------------------------------------------
+------------------------------------------------------------
+$-----------------------------
+$ Type: Springback
+$-----------------------------
+BLOCKNAME OP21 - Springback, 1,
+------------------------------
+GLEICHUNGSLOESER
+CHOLESKY
+KOMPAKT,1,
+KONDITIONSZAHL
+OHNE ITERATIVES VERFAHREN
+------------------------------
+STEUERUNG
+1,1000,,0,
+KRAFT
+ABSOLUT
+0.01,
+NEWTON
+MIT LINE-SEARCH
+3,6,
+------------------------------
+WERKZEUGSTEUERUNG
+ENTLASTUNG/POSITIONIERUNG,4,
+Binder
+0,0,0,
+Die
+0,0,0,
+Guidepins
+0,0,0,
+Punch
+0,0,0,
+INITIALBEWEGUNG,0,
+GESCHWINDIGKEITEN/LASTEN,0.1,0,
+------------------------------
+ZEITSCHRITT,1.0,0,
+------------------------------
+REIBUNG,-1,
+------------------------------
+RANDBEDINGUNGEN,3,
+Blank(8701),
+R,R,R,
+0.,0.,0.,
+Blank(9437)
+R,*,R,
+0.,,0.,
+Blank(8891)
+*,*,R,
+,,0.,
+------------------------------
+DAEMPFUNG,-1,
+------------------------------
+POSTINKREMENT,,,,,,1,
+------------------------------------------------------------
+------------------------------------------------------------

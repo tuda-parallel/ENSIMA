@@ -215,7 +215,7 @@ def preprocess_point_cloud(pc: np.ndarray, rotate: bool = False) -> np.ndarray:
 
 
 if __name__ == "__main__":
-    path = "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04/Einleger.t52"
+    path = "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_04/Einleger.t52"
     coords = read_coordinates_from_file(path, log_level="DEBUG")
     a, b, h = compute_bounding_box_dimensions(coords)
     logger = Logger(__name__).get()

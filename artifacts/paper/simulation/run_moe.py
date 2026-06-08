@@ -1,5 +1,5 @@
 """
-Script used to produce the MoE simulation results in artifacts/JIMS/sim_results/MOE/.
+Script used to produce the MoE simulation results in artifacts/paper/sim_results/MOE/.
 
 Two part configurations are covered (select by uncommenting the relevant lines):
 
@@ -41,8 +41,8 @@ if __name__ == "__main__":
             #
             # --- Active part (Longitudinal Beam) ---
             "-p",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01",  # <<< DACH-VWS
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_02",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_01",  # <<< DACH-VWS
             #
             "-j",
             "Laengstraeger_02",
@@ -53,8 +53,8 @@ if __name__ == "__main__":
             # "DACH-VWS-Session.ofs",  # <<< DACH-VWS
             #
             "-g",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02/Laengstraeger_02.t52",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",  # <<< DACH-VWS
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_02/Laengstraeger_02.t52",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",  # <<< DACH-VWS
             #
             "-c",
             "48",
@@ -164,35 +164,35 @@ if __name__ == "__main__":
     parts = [
         (
             "ASaeule",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat/ASaeule.t52",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_01_Flat/ASaeule.t52",
         ),
         (
             "BSaeule",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_02_Beam/BSaeule_DX56D.t52",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_02_Beam/BSaeule_DX56D.t52",
         ),
         (
             "RadhausAdapter",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_03_Deep/RadhausAdapter.t52",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_03_Deep/RadhausAdapter.t52",
         ),
         (
             "Quertraeger",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/CrossBeam.t52",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/CrossBeam.t52",
         ),
         (
             "FrontFender_01",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/FrontFender_A.t52",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/FrontFender_A.t52",
         ),
         (
             "Heckklappe_aussen",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/TailGate.t52",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/TailGate.t52",
         ),
         (
             "Tankdeckeleinsatz",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/TankCapInsert.t52",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/TankCapInsert.t52",
         ),
         (
             "Tunnel_Passat",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/T52-PartFiles/Tunnel.t52",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/Tunnel.t52",
         ),
     ]
 

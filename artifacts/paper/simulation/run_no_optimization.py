@@ -1,6 +1,6 @@
 """
 Script used to produce the no_optimization baseline results in
-artifacts/JIMS/sim_results/no_optimization/.
+artifacts/paper/sim_results/no_optimization/.
 
 Runs the OpenForm solver with fixed expert- or user-defined parameter sequences —
 no Bayesian optimization loop. Each part has a hardcoded input list representing
@@ -29,11 +29,11 @@ if __name__ == "__main__":
             "-ofm",
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             "-p",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_04",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/PartType_01_Flat",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_01",
-            # "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_02",
-            "/d/github/ENSIMA/artifacts/JIMS/TCO-Benchmark/new_parts/PartType_03",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_04",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_01_Flat",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_01",
+            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_02",
+            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_03",
             "-j",
             # "Einleger",
             # "ASaeule",

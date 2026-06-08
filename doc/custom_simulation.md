@@ -1,6 +1,6 @@
 # Using ENSIMA with a Custom Simulation
 
-ENSIMA is not limited to OpenForm. Any simulation can be plugged in by replacing two classes and providing a results CSV.
+ENSIMA is not limited to OpenForm. Any simulation can be plugged in by subclassing two abstract base classes and passing them to `main()`.
 
 ---
 
@@ -9,8 +9,8 @@ ENSIMA is not limited to OpenForm. Any simulation can be plugged in by replacing
 Three steps are required to integrate a custom simulation:
 
 1. **[Prepare the results CSV](#1-the-results-csv)** — a structured file that stores past simulation results and is read at startup to provide initial training data.
-2. **[Implement `simulation.py`](#2-simulationpy--replace-the-simulation-class)** — replace `ensima/classes/simulation.py` with a class that runs your simulation, reads the output, appends the result to the CSV, and returns it as a NumPy array.
-3. **[Implement `file_modifier.py`](#3-file_modifierpy--replace-the-file-modifier-optional)** — replace `ensima/classes/file_modifier.py` with a class that writes the proposed parameters into your simulator's input files. Only needed if your simulator reads parameters from a file.
+2. **[Implement `simulation.py`](#2-simulationpy--subclass-basesimulation)** — subclass `BaseSimulation`, implement `run()`, and pass your class to `main()`.
+3. **[Implement `file_modifier.py`](#3-file_modifierpy--subclass-basefilemodifier-optional)** — subclass `BaseFileModifier` and implement `set_design_parameters()`. Only needed if your simulator reads parameters from an input file.
 
 Two further steps are optional:
 
@@ -42,7 +42,7 @@ Rules:
 
 **Cold start.** If you have no prior results the CSV can have an empty data section — headers and `START`/`END` with no data rows. The optimizer falls back to random sampling until enough data has been collected to fit the surrogate model.
 
-**Appending results.** Each simulation run must append its result to this file so the surrogate model stays current across restarts. If your `Simulation.run()` calls the simulator directly and reads back the result, it is also responsible for appending the new row before returning. Use the helper below if your simulation does not do this automatically:
+**Appending results.** Each simulation run must append its result to the CSV so the surrogate model stays current across restarts. This is the responsibility of `run()` — call the helper below before returning `y`:
 
 ```python
 def append_result(csv_path: str, x_row: list, y_row: list):
@@ -54,53 +54,29 @@ def append_result(csv_path: str, x_row: list, y_row: list):
         f.writelines(lines)
 ```
 
-Call it at the end of `Simulation.run()` before returning `y`.
-
 ---
 
-## 2. `simulation.py` — replace the simulation class
+## 2. `simulation.py` — subclass `BaseSimulation`
 
-Replace `ensima/classes/simulation.py` with your own implementation. The class must match the interface that `BayesianOptimization` calls:
+Create a file in your project and subclass `BaseSimulation` from `ensima.classes.base_simulation`:
 
 ```python
-# ensima/classes/simulation.py  (your replacement)
+# my_project/simulation.py
+import subprocess
 import numpy as np
-from argparse import Namespace
+from ensima.classes.base_simulation import BaseSimulation
 
 
-class Simulation:
-    def __init__(
-        self,
-        args: Namespace,
-        next_sample: np.ndarray,
-        iteration: int = 0,
-        total_iterations: int = 0,
-        prefix=None,
-    ):
-        self.args = args
-        self.next_sample = next_sample
-        self.iteration = iteration
+class MySimulation(BaseSimulation):
 
     def run(self, file_modifier, lock, type_filter: bool = False) -> np.ndarray:
-        """
-        Run one simulation and return the outputs.
-
-        Args:
-            file_modifier: instance of your FileModifier (may be None if not used).
-            lock:          multiprocessing lock passed by the optimizer (use if needed).
-            type_filter:   whether to tag this result in the CSV by job name.
-
-        Returns:
-            np.ndarray of shape (1, n_outputs), columns matching --y_fields in order.
-        """
         params = dict(zip(self.args.x_fields, self.next_sample[-1].tolist()))
 
         # 1. Write parameters into input files (if a file modifier is provided)
         if file_modifier is not None:
             file_modifier.set_design_parameters(params)
 
-        # 2. Run the simulation — replace with your actual call
-        #    e.g. subprocess.run([self.args.ofsolver, ...], check=True)
+        # 2. Run the simulation
         y = self._run(params)
 
         # 3. Append result to the CSV so the model stays current across restarts
@@ -126,21 +102,20 @@ class Simulation:
         raise NotImplementedError
 ```
 
-**Important:** `--jobname` must be set in your run script. It is the simulation job name passed to the optimizer and used as a label in the CSV. Without it, ENSIMA runs a built-in dummy loop instead of calling your simulation.
+**Important:** `--jobname` must be set in your run script. It is the simulation job name used as a label in the CSV. Without it, ENSIMA runs a built-in dummy loop instead of calling your simulation.
 
 ---
 
-## 3. `file_modifier.py` — replace the file modifier (optional)
+## 3. `file_modifier.py` — subclass `BaseFileModifier` (optional)
 
-Replace `ensima/classes/file_modifier.py` if your simulator reads parameters from an input file. The class must implement `set_design_parameters` and `print`, which are called by `BayesianOptimization` before each simulation:
+Create a file in your project and subclass `BaseFileModifier` from `ensima.classes.base_file_modifier`:
 
 ```python
-# ensima/classes/file_modifier.py  (your replacement)
+# my_project/file_modifier.py
+from ensima.classes.base_file_modifier import BaseFileModifier
 
 
-class FileModifier:
-    def __init__(self, input_file: str, log_level: str = "info", prefix: str = ""):
-        self.input_file = input_file
+class MyFileModifier(BaseFileModifier):
 
     def set_design_parameters(self, parameters: dict) -> None:
         """Write the proposed parameter values into the simulator's input file."""
@@ -151,22 +126,18 @@ class FileModifier:
             content = content.replace(f"${{{key}}}", str(value))
         with open(self.input_file, "w") as f:
             f.write(content)
-
-    def print(self):
-        pass
 ```
 
-`BayesianOptimization` constructs the `FileModifier` as:
+`BayesianOptimization` constructs the file modifier as:
 
 ```python
-FileModifier(
+MyFileModifier(
     os.path.join(args.path, args.jobname + ".dat"),
     log_level=args.log_level,
-    prefix=...,
 )
 ```
 
-So `args.path` and `args.jobname` determine which file is opened. Adjust the constructor or `set_design_parameters` to match your input file format and location.
+So `args.path` and `args.jobname` determine which file is opened. Adjust `set_design_parameters` to match your input file format.
 
 ---
 
@@ -175,6 +146,7 @@ So `args.path` and `args.jobname` determine which file is opened. Adjust the con
 If your simulation needs flags beyond ENSIMA's built-in list, extend `parse_arguments`:
 
 ```python
+# my_project/args.py
 from ensima.helpers.parse_args import parse_arguments as _parse_arguments
 import argparse
 
@@ -202,18 +174,25 @@ Rather than a long command line, prepare a small Python script that hard-codes a
 from ensima.helpers.parse_args import parse_arguments  # or your extended version
 from ensima.optimize import main
 
+from my_project.simulation import MySimulation
+from my_project.file_modifier import MyFileModifier  # omit if not needed
+
 if __name__ == "__main__":
     args = parse_arguments([
-        "-j",             "my_job",          # required: triggers the real simulation path
-        "--x_fields",     "param1", "param2",
-        "--y_fields",     "output1", "output2",
-        "--path",         "/path/to/job/directory",
-        "--output",       "/path/to/results.csv",
-        "--iterations",   "20",
-        "--log_level",    "INFO",
+        "-j",           "my_job",       # required: triggers the real simulation path
+        "--x_fields",   "param1", "param2",
+        "--y_fields",   "output1", "output2",
+        "--path",       "/path/to/job/directory",
+        "--output",     "/path/to/results.csv",
+        "--iterations", "20",
+        "--log_level",  "INFO",
     ])
 
-    main(args=args)
+    main(
+        args=args,
+        simulation_class=MySimulation,
+        file_modifier_class=MyFileModifier,  # omit if not needed
+    )
 ```
 
 Run it with:

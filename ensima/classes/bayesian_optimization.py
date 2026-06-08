@@ -70,6 +70,8 @@ class BayesianOptimization:
         types: np.ndarray = None,
         device: str = "auto",
         backend: str = "torch",
+        simulation_class=None,
+        file_modifier_class=None,
     ) -> None:
         """
         A Bayesian Optimization framework for optimizing an objective function.
@@ -102,6 +104,8 @@ class BayesianOptimization:
         self.args = args
         self.file_modifier = None
         self.constrains = None
+        self._simulation_class = simulation_class or Simulation
+        self._file_modifier_class = file_modifier_class or FileModifier
         self.logger_obj = Logger(__name__, level=self.args.log_level)
         self.logger = self.logger_obj.logger
         self.next_samples = None
@@ -968,7 +972,7 @@ class BayesianOptimization:
                 lock.acquire()  # released later during simulation
                 self.logger.debug("Acquired lock")
 
-            self.file_modifier = FileModifier(
+            self.file_modifier = self._file_modifier_class(
                 os.path.join(str(self.args.path), str(self.args.jobname) + ".dat"),
                 log_level=self.args.log_level,
                 prefix=f"Iteration {prefix}/{n_iters}",
@@ -985,7 +989,9 @@ class BayesianOptimization:
         else:
             # Otherwise, trigger the long-running simulation
             start = time.time()
-            sim = Simulation(self.args, next_sample, suffix, n_iters, prefix=prefix)
+            sim = self._simulation_class(
+                self.args, next_sample, suffix, n_iters, prefix=prefix
+            )
             new_y = sim.run(
                 self.file_modifier,
                 lock,
