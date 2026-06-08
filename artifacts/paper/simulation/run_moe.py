@@ -31,6 +31,8 @@ from ensima.helpers.adjust_args_cluster import (
 from ensima.helpers.parse_args import parse_arguments
 from ensima.optimize import main
 
+PAPER_TCO = "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark"
+
 if __name__ == "__main__":
     args = parse_arguments(
         [
@@ -41,8 +43,8 @@ if __name__ == "__main__":
             #
             # --- Active part (Longitudinal Beam) ---
             "-p",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_02",
-            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_01",  # <<< DACH-VWS
+            f"{PAPER_TCO}/new_parts/PartType_02",
+            # f"{PAPER_TCO}/new_parts/PartType_01",  # <<< DACH-VWS
             #
             "-j",
             "Laengstraeger_02",
@@ -53,8 +55,8 @@ if __name__ == "__main__":
             # "DACH-VWS-Session.ofs",  # <<< DACH-VWS
             #
             "-g",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_02/Laengstraeger_02.t52",
-            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_01/DACH-VWS.t52",  # <<< DACH-VWS
+            f"{PAPER_TCO}/new_parts/PartType_02/Laengstraeger_02.t52",
+            # f"{PAPER_TCO}/new_parts/PartType_01/DACH-VWS.t52",  # <<< DACH-VWS
             #
             "-c",
             "48",
@@ -162,38 +164,14 @@ if __name__ == "__main__":
     # Training part library — one expert is created per entry.
     # Each tuple is (label, path-to-t52-geometry-file).
     parts = [
-        (
-            "ASaeule",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_01_Flat/ASaeule.t52",
-        ),
-        (
-            "BSaeule",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_02_Beam/BSaeule_DX56D.t52",
-        ),
-        (
-            "RadhausAdapter",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_03_Deep/RadhausAdapter.t52",
-        ),
-        (
-            "Quertraeger",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/CrossBeam.t52",
-        ),
-        (
-            "FrontFender_01",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/FrontFender_A.t52",
-        ),
-        (
-            "Heckklappe_aussen",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/TailGate.t52",
-        ),
-        (
-            "Tankdeckeleinsatz",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/TankCapInsert.t52",
-        ),
-        (
-            "Tunnel_Passat",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/T52-PartFiles/Tunnel.t52",
-        ),
+        ("ASaeule", f"{PAPER_TCO}/PartType_01_Flat/ASaeule.t52"),
+        ("BSaeule", f"{PAPER_TCO}/PartType_02_Beam/BSaeule_DX56D.t52"),
+        ("RadhausAdapter", f"{PAPER_TCO}/PartType_03_Deep/RadhausAdapter.t52"),
+        ("Quertraeger", f"{PAPER_TCO}/T52-PartFiles/CrossBeam.t52"),
+        ("FrontFender_01", f"{PAPER_TCO}/T52-PartFiles/FrontFender_A.t52"),
+        ("Heckklappe_aussen", f"{PAPER_TCO}/T52-PartFiles/TailGate.t52"),
+        ("Tankdeckeleinsatz", f"{PAPER_TCO}/T52-PartFiles/TankCapInsert.t52"),
+        ("Tunnel_Passat", f"{PAPER_TCO}/T52-PartFiles/Tunnel.t52"),
     ]
 
     # Parameter constraints

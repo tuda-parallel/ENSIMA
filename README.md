@@ -212,7 +212,7 @@ Several examples are provided under [examples](./examples):
 | `example_detailed_training.py` | Detailed GP training walkthrough |
 | `example_plot.py` | Plotting optimization results |
 
-Experiment data and results used for the paper paper are available under [artifacts/paper](./artifacts/paper), organized by experiment type (`MLVGP`, `MOE`, `no_optimization`) and part geometry.
+Experiment data and results used for the paper are available under [artifacts/paper](./artifacts/paper), organized by experiment type (`MLVGP`, `MOE`, `no_optimization`) and part geometry.
 
 <p align="right"><a href="#ensima">⬆</a></p>
 

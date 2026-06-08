@@ -19,6 +19,8 @@ from ensima.helpers.adjust_args_cluster import adjust_args_for_cluster
 from ensima.helpers.parse_args import parse_arguments
 from ensima.optimize import main
 
+PAPER_TCO = "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark"
+
 if __name__ == "__main__":
     args = parse_arguments(
         [
@@ -27,11 +29,11 @@ if __name__ == "__main__":
             "-ofm",
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             "-p",
-            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_04",
-            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/PartType_01_Flat",
-            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_01",
-            # "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_02",
-            "/d/github/ENSIMA/artifacts/paper/TCO-Benchmark/new_parts/PartType_03",
+            # f"{PAPER_TCO}/PartType_04",
+            # f"{PAPER_TCO}/PartType_01_Flat",
+            # f"{PAPER_TCO}/new_parts/PartType_01",
+            # f"{PAPER_TCO}/new_parts/PartType_02",
+            f"{PAPER_TCO}/new_parts/PartType_03",
             "-j",
             # "Einleger",
             # "ASaeule",

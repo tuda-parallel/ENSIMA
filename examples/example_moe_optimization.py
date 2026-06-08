@@ -20,7 +20,7 @@ from ensima.helpers.parse_args import parse_arguments
 from ensima.optimize import main
 
 REPO_ROOT = Path(__file__).parent.parent
-paper_TCO = f"{REPO_ROOT}/artifacts/paper/TCO-Benchmark"
+PAPER_TCO = f"{REPO_ROOT}/artifacts/paper/TCO-Benchmark"
 TEST_CSV = f"{REPO_ROOT}/test/csv"
 
 # INFO: In contrast to `example_optimization.py`, the moe mode needs:
@@ -36,11 +36,11 @@ if __name__ == "__main__":
             "/d/gitlab/ensima-code/test_data/gns/OpenForm_daily_linux64/OpenForm_64_batch",
             #
             "-p",
-            # f"{paper_TCO}/PartType_01_Flat",
-            # f"{paper_TCO}/PartType_04",
-            # f"{paper_TCO}/new_parts/PartType_01",
-            f"{paper_TCO}/new_parts/PartType_02",
-            # f"{paper_TCO}/new_parts/PartType_03",
+            # f"{PAPER_TCO}/PartType_01_Flat",
+            # f"{PAPER_TCO}/PartType_04",
+            # f"{PAPER_TCO}/new_parts/PartType_01",
+            f"{PAPER_TCO}/new_parts/PartType_02",
+            # f"{PAPER_TCO}/new_parts/PartType_03",
             #
             "-j",
             # "ASaeule",
@@ -63,11 +63,11 @@ if __name__ == "__main__":
             f"{TEST_CSV}/DataSets-AIandML_labeled.csv",
             #
             "-g",
-            # f"{paper_TCO}/PartType_01_Flat/Aseule.t52",
-            # f"{paper_TCO}/PartType_04/Einleger.t52",
-            # f"{paper_TCO}/new_parts/PartType_01/DACH-VWS.t52",
-            f"{paper_TCO}/new_parts/PartType_02/Laengstraeger_02.t52",
-            # f"{paper_TCO}/new_parts/PartType_03/SeatShell.t52",
+            # f"{PAPER_TCO}/PartType_01_Flat/Aseule.t52",
+            # f"{PAPER_TCO}/PartType_04/Einleger.t52",
+            # f"{PAPER_TCO}/new_parts/PartType_01/DACH-VWS.t52",
+            f"{PAPER_TCO}/new_parts/PartType_02/Laengstraeger_02.t52",
+            # f"{PAPER_TCO}/new_parts/PartType_03/SeatShell.t52",
             #
             "-l",
             "DEBUG",
@@ -157,51 +157,51 @@ if __name__ == "__main__":
     parts = [
         (
             "ASaeule",
-            f"{paper_TCO}/PartType_01_Flat/ASaeule.t52",
+            f"{PAPER_TCO}/PartType_01_Flat/ASaeule.t52",
         ),
         (
             "BSaeule",
-            f"{paper_TCO}/PartType_02_Beam/BSaeule_DX56D.t52",
+            f"{PAPER_TCO}/PartType_02_Beam/BSaeule_DX56D.t52",
         ),
         (
             "RadhausAdapter",
-            f"{paper_TCO}/PartType_03_Deep/RadhausAdapter.t52",
+            f"{PAPER_TCO}/PartType_03_Deep/RadhausAdapter.t52",
         ),
         # (
         #     "Einleger",
-        #     f"{paper_TCO}/PartType_04/Einleger.t52",
+        #     f"{PAPER_TCO}/PartType_04/Einleger.t52",
         # ),
         # (
         #     "ASaeule_BSym",
-        #     f"{paper_TCO}/T52-PartFiles/A-Pilar.t52",
+        #     f"{PAPER_TCO}/T52-PartFiles/A-Pilar.t52",
         # ),
         (
             "Quertraeger",
-            f"{paper_TCO}/T52-PartFiles/CrossBeam.t52",
+            f"{PAPER_TCO}/T52-PartFiles/CrossBeam.t52",
         ),
         (
             "FrontFender_01",
-            f"{paper_TCO}/T52-PartFiles/FrontFender_A.t52",
+            f"{PAPER_TCO}/T52-PartFiles/FrontFender_A.t52",
         ),
         (
             "Kotfluegel-DC",
-            f"{paper_TCO}/T52-PartFiles/FrontFender_B.t52",
+            f"{PAPER_TCO}/T52-PartFiles/FrontFender_B.t52",
         ),
         (
             "Heckklappe_aussen",
-            f"{paper_TCO}/T52-PartFiles/TailGate.t52",
+            f"{PAPER_TCO}/T52-PartFiles/TailGate.t52",
         ),
         (
             "Tankdeckeleinsatz",
-            f"{paper_TCO}/T52-PartFiles/TankCapInsert.t52",
+            f"{PAPER_TCO}/T52-PartFiles/TankCapInsert.t52",
         ),
         (
             "Tunnel_Passat",
-            f"{paper_TCO}/T52-PartFiles/Tunnel.t52",
+            f"{PAPER_TCO}/T52-PartFiles/Tunnel.t52",
         ),
         # (
         #     "SeatShell",
-        #     f"{paper_TCO}/new_parts/PartType_03/SeatShell.t52",
+        #     f"{PAPER_TCO}/new_parts/PartType_03/SeatShell.t52",
         # ),
     ]
 
