@@ -1,0 +1,21 @@
+$---------------------------------------------------------------
+$ Custom simulation results
+$
+$ Input parameters:
+$ param1 : first input parameter
+$ param2 : second input parameter
+$
+$ Output targets:
+$ output1 : first simulation output
+$ output2 : second simulation output
+$
+$ Row Format:
+$ param1 , param2 , output1 , output2 ,
+$---------------------------------------------------------------
+START
+0.5 , 1.2 , 3.41 , 0.82
+1.0 , 0.9 , 2.10 , 1.54
+0.8 , 1.5 , 4.03 , 0.61
+1.2 , 0.7 , 1.87 , 1.99
+0.3 , 1.8 , 5.12 , 0.44
+END
